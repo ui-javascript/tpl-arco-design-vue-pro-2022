@@ -1,5 +1,8 @@
+const modules = import.meta.globEager(
+  '../../{views,components}/**/locale/en-US.ts'
+);
 const locale = {};
-const modules = import.meta.globEager('../../views/**/locale/en-US.ts');
+
 Object.keys(modules).forEach((key) => {
   Object.assign(locale, modules[key].default);
 });

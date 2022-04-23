@@ -1,5 +1,8 @@
 const locale = {};
-const modules = import.meta.globEager('../../views/**/locale/zh-CN.ts');
+const modules = import.meta.globEager(
+  '../../{views,components}/**/locale/zh-CN.ts'
+);
+
 Object.keys(modules).forEach((key) => {
   Object.assign(locale, modules[key].default);
 });

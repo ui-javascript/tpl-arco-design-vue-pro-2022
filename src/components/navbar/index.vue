@@ -135,7 +135,7 @@
               </a-space>
             </a-doption>
             <a-doption>
-              <a-space @click="$router.push({ name: 'info' })">
+              <a-space @click="$router.push({ name: 'Info' })">
                 <icon-user />
                 <span>
                   {{ $t('messageBox.userCenter') }}
@@ -143,7 +143,7 @@
               </a-space>
             </a-doption>
             <a-doption>
-              <a-space @click="$router.push({ name: 'setting' })">
+              <a-space @click="$router.push({ name: 'Setting' })">
                 <icon-settings />
                 <span>
                   {{ $t('messageBox.userSettings') }}
@@ -248,9 +248,11 @@
     display: flex;
     padding-right: 20px;
     list-style: none;
+
     :deep(.locale-select) {
       border-radius: 20px;
     }
+
     li {
       display: flex;
       align-items: center;
@@ -261,16 +263,19 @@
       color: var(--color-text-1);
       text-decoration: none;
     }
+
     .nav-btn {
-      border-color: rgb(var(--gray-2));
       color: rgb(var(--gray-8));
       font-size: 16px;
+      border-color: rgb(var(--gray-2));
     }
+
     .trigger-btn,
     .ref-btn {
       position: absolute;
       bottom: 14px;
     }
+
     .trigger-btn {
       margin-left: 14px;
     }
