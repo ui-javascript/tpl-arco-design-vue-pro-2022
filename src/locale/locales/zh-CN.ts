@@ -1,4 +1,21 @@
+const locale = {};
+const modules = import.meta.globEager('../../views/**/locale/zh-CN.ts');
+Object.keys(modules).forEach((key) => {
+  Object.assign(locale, modules[key].default);
+});
+
 export default {
+  'menu.dashboard': '仪表盘',
+  'menu.list': '列表页',
+  'menu.result': '结果页',
+  'menu.exception': '异常页',
+  'menu.form': '表单页',
+  'menu.profile': '详情页',
+  'menu.visualization': '数据可视化',
+  'menu.user': '个人中心',
+  'navbar.docs': '文档中心',
+  'navbar.action.locale': '切换为中文',
+
   'settings.title': '页面配置',
   'settings.themeColor': '主题色',
   'settings.content': '内容区域',
@@ -22,4 +39,6 @@ export default {
   'settings.close': '关闭',
   'settings.color.tooltip':
     '根据主题颜色生成的 10 个梯度色（将配置复制到项目中，主题色才能对亮色 / 暗黑模式同时生效）',
+
+  ...locale,
 };

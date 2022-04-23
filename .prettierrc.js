@@ -6,4 +6,6 @@ module.exports = {
   quoteProps: 'consistent',
   htmlWhitespaceSensitivity: 'strict',
   vueIndentScriptAndStyle: true,
+  // @fix https://stackoverflow.com/questions/53516594/why-do-i-keep-getting-delete-cr-prettier-prettier
+  endOfLine: 'auto',
 };

@@ -1,4 +1,20 @@
+const locale = {};
+const modules = import.meta.globEager('../../views/**/locale/en-US.ts');
+Object.keys(modules).forEach((key) => {
+  Object.assign(locale, modules[key].default);
+});
+
 export default {
+  'menu.dashboard': 'Dashboard',
+  'menu.list': 'List',
+  'menu.result': 'Result',
+  'menu.exception': 'Exception',
+  'menu.form': 'Form',
+  'menu.profile': 'Profile',
+  'menu.visualization': 'Data Visualization',
+  'menu.user': 'User Center',
+  'navbar.docs': 'Docs',
+  'navbar.action.locale': 'Switch to English',
   'settings.title': 'Settings',
   'settings.themeColor': 'Theme Color',
   'settings.content': 'Content Setting',
@@ -22,4 +38,5 @@ export default {
   'settings.close': 'Close',
   'settings.color.tooltip':
     '10 gradient colors generated according to the theme color',
+  ...locale,
 };
