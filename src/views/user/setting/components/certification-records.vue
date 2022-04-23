@@ -54,7 +54,7 @@
 
 <script lang="ts" setup>
   import { PropType } from 'vue';
-  import { CertificationRecord } from '@/api/user-center';
+  import { CertificationRecord } from '@/views/user/user-center.api';
 
   defineProps({
     renderData: {

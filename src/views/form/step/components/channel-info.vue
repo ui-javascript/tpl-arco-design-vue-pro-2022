@@ -98,7 +98,7 @@
 <script lang="ts" setup>
   import { ref } from 'vue';
   import { FormInstance } from '@arco-design/web-vue/es/form';
-  import { ChannelInfoModel } from '@/api/form';
+  import { ChannelInfoModel } from '@/views/form/form.api';
 
   const emits = defineEmits(['changeStep']);
 

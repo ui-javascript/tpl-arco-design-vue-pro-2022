@@ -12,7 +12,7 @@
 <script lang="ts" setup>
   import { ref } from 'vue';
   import useLoading from '@/hooks/loading';
-  import { queryContentPeriodAnalysis } from '@/api/visualization';
+  import { queryContentPeriodAnalysis } from '@/views/visualization/visualization.api';
   import { ToolTipFormatterParams } from '@/types/echarts';
   import useChartOption from '@/hooks/chart-option';
 

@@ -225,7 +225,11 @@
   import { computed, ref, reactive } from 'vue';
   import { useI18n } from 'vue-i18n';
   import useLoading from '@/hooks/loading';
-  import { queryPolicyList, PolicyRecord, PolicyParams } from '@/api/list';
+  import {
+    queryPolicyList,
+    PolicyRecord,
+    PolicyParams,
+  } from '@/views/list/list.api';
   import { Pagination, Options } from '@/types/global';
 
   const generateFormModel = () => {
@@ -325,6 +329,7 @@
   .container {
     padding: 0 20px 20px 20px;
   }
+
   :deep(.arco-table-th) {
     &:last-child {
       .arco-table-th-item-title {

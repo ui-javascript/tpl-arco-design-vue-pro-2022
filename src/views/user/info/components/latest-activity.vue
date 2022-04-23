@@ -42,7 +42,10 @@
 
 <script lang="ts" setup>
   import { ref } from 'vue';
-  import { queryLatestActivity, LatestActivity } from '@/api/user-center';
+  import {
+    queryLatestActivity,
+    LatestActivity,
+  } from '@/views/user/user-center.api';
   import useLoading from '@/hooks/loading';
 
   const { loading, setLoading } = useLoading(true);
@@ -68,17 +71,21 @@
       justify-content: space-between;
     }
   }
+
   .general-card :deep(.arco-list-item) {
     padding-left: 0;
     border-bottom: none;
+
     .arco-list-item-meta-content {
       flex: 1;
       padding-bottom: 27px;
       border-bottom: 1px solid var(--color-neutral-3);
     }
+
     .arco-list-item-meta-avatar {
       padding-bottom: 27px;
     }
+
     .skeleton-item {
       margin-top: 10px;
       padding-bottom: 20px;

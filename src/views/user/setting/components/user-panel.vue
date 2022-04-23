@@ -57,7 +57,7 @@
     RequestOption,
   } from '@arco-design/web-vue/es/upload/interfaces';
   import { useUserStore } from '@/store';
-  import { userUploadApi } from '@/api/user-center';
+  import { userUploadApi } from '@/views/user/user-center.api';
 
   const userStore = useUserStore();
   const file = {
@@ -119,11 +119,13 @@
     padding: 14px 0 4px 4px;
     border-radius: 4px;
   }
+
   :deep(.arco-avatar-trigger-icon-button) {
     width: 32px;
     height: 32px;
     line-height: 32px;
     background-color: #e8f3ff;
+
     .arco-icon-camera {
       margin-top: 8px;
       color: rgb(var(--arcoblue-6));

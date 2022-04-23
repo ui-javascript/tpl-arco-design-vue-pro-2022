@@ -28,7 +28,7 @@
 <script lang="ts" setup>
   import { computed, PropType } from 'vue';
   import { useI18n } from 'vue-i18n';
-  import { ProfileBasicRes } from '@/api/profile';
+  import { ProfileBasicRes } from '@/views/profile/profile.api';
 
   type BlockList = {
     title: string;
@@ -141,6 +141,7 @@
 <style scoped lang="less">
   .item-container {
     padding-top: 20px;
+
     :deep(.arco-descriptions-item-label) {
       font-weight: normal;
     }

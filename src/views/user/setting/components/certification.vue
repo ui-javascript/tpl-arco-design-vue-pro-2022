@@ -11,7 +11,7 @@
     queryCertification,
     UnitCertification,
     EnterpriseCertificationModel,
-  } from '@/api/user-center';
+  } from '@/views/user/user-center.api';
   import useLoading from '@/hooks/loading';
   import EnterpriseCertification from './enterprise-certification.vue';
   import CertificationRecords from './certification-records.vue';

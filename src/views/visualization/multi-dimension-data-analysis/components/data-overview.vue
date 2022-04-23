@@ -36,7 +36,7 @@
   import { computed, ref } from 'vue';
   import { useI18n } from 'vue-i18n';
   import { LineSeriesOption } from 'echarts';
-  import { queryDataOverview } from '@/api/visualization';
+  import { queryDataOverview } from '@/views/visualization/visualization.api';
   import useLoading from '@/hooks/loading';
   import { ToolTipFormatterParams } from '@/types/echarts';
   import useThemes from '@/hooks/themes';
@@ -290,11 +290,13 @@
       color: rgb(var(--gray-10));
       font-weight: bold;
     }
+
     .arco-statistic-value {
       display: flex;
       align-items: center;
     }
   }
+
   .statistic-prefix {
     display: inline-block;
     width: 32px;

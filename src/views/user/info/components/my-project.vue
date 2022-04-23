@@ -47,7 +47,10 @@
 </template>
 
 <script lang="ts" setup>
-  import { queryMyProjectList, MyProjectRecord } from '@/api/user-center';
+  import {
+    queryMyProjectList,
+    MyProjectRecord,
+  } from '@/views/user/user-center.api';
   import useRequest from '@/hooks/request';
 
   const defaultValue = Array(6).fill({} as MyProjectRecord);
@@ -62,6 +65,7 @@
     min-height: 128px;
     padding-bottom: 0;
   }
+
   .my-project {
     &-header {
       display: flex;

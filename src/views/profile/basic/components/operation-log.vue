@@ -48,7 +48,10 @@
 
 <script lang="ts" setup>
   import { ref } from 'vue';
-  import { queryOperationLog, operationLogRes } from '@/api/profile';
+  import {
+    queryOperationLog,
+    operationLogRes,
+  } from '@/views/profile/profile.api';
   import useLoading from '@/hooks/loading';
 
   const { loading, setLoading } = useLoading(true);

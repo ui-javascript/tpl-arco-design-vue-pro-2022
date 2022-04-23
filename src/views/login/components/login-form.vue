@@ -67,7 +67,7 @@
   import { useI18n } from 'vue-i18n';
   import { useUserStore } from '@/store';
   import useLoading from '@/hooks/loading';
-  import { LoginData } from '@/api/user';
+  import { LoginData } from '@/views/user/user.api';
 
   const router = useRouter();
   const { t } = useI18n();

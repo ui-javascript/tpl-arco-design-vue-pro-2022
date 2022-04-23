@@ -31,7 +31,10 @@
 <script lang="ts" setup>
   import { computed, ref } from 'vue';
   import useLoading from '@/hooks/loading';
-  import { queryDataChainGrowth, DataChainGrowth } from '@/api/visualization';
+  import {
+    queryDataChainGrowth,
+    DataChainGrowth,
+  } from '@/views/visualization/visualization.api';
   import useChartOption from '@/hooks/chart-option';
 
   const props = defineProps({
@@ -125,15 +128,18 @@
   .general-card {
     min-height: 204px;
   }
+
   .content {
     display: flex;
     align-items: center;
     width: 100%;
     margin-bottom: 12px;
   }
+
   .percent-text {
     margin-left: 16px;
   }
+
   .chart {
     width: 100%;
     height: 80px;

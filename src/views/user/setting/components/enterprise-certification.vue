@@ -37,7 +37,7 @@
 
 <script lang="ts" setup>
   import { PropType, computed } from 'vue';
-  import { EnterpriseCertificationModel } from '@/api/user-center';
+  import { EnterpriseCertificationModel } from '@/views/user/user-center.api';
 
   const props = defineProps({
     enterpriseInfo: {
@@ -104,11 +104,13 @@
     padding: 20px;
     background-color: rgb(var(--gray-1));
   }
+
   .item-label {
     min-width: 98px;
-    text-align: right;
     color: var(--color-text-8);
-    &:after {
+    text-align: right;
+
+    &::after {
       content: ':';
     }
   }

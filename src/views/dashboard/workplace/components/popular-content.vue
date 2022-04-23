@@ -75,7 +75,10 @@
 <script lang="ts" setup>
   import { ref } from 'vue';
   import useLoading from '@/hooks/loading';
-  import { queryPopularList, PopularRecord } from '@/api/dashboard';
+  import {
+    queryPopularList,
+    PopularRecord,
+  } from '@/views/dashboard/dashboard.api';
 
   const type = ref('text');
   const { loading, setLoading } = useLoading();
@@ -101,15 +104,19 @@
   .general-card {
     min-height: 388px;
   }
+
   :deep(.arco-table-tr) {
     height: 44px;
+
     .arco-typography {
       margin-bottom: 0;
     }
   }
+
   .increases-cell {
     display: flex;
     align-items: center;
+
     span {
       margin-right: 4px;
     }

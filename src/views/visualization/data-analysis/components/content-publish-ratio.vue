@@ -19,7 +19,7 @@
   import {
     queryContentPublish,
     ContentPublishRecord,
-  } from '@/api/visualization';
+  } from '@/views/visualization/visualization.api';
   import useChartOption from '@/hooks/chart-option';
 
   const tooltipItemsHtmlString = (items: ToolTipFormatterParams[]) => {

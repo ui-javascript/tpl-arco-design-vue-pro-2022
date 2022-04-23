@@ -88,7 +88,7 @@
 <script lang="ts" setup>
   import { ref } from 'vue';
   import { FormInstance } from '@arco-design/web-vue/es/form';
-  import { BaseInfoModel } from '@/api/form';
+  import { BaseInfoModel } from '@/views/form/form.api';
 
   const emits = defineEmits(['changeStep']);
   const formRef = ref<FormInstance>();
@@ -110,6 +110,7 @@
 <style scoped lang="less">
   .container {
     padding: 20px;
+
     .keep-margin {
       margin-bottom: 20px;
     }

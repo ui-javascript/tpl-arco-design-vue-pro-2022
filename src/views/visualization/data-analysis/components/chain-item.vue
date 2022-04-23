@@ -35,7 +35,7 @@
     queryPublicOpinionAnalysis,
     PublicOpinionAnalysis,
     PublicOpinionAnalysisRes,
-  } from '@/api/visualization';
+  } from '@/views/visualization/visualization.api';
   import useChartOption from '@/hooks/chart-option';
 
   const barChartOptionsFactory = () => {
@@ -251,27 +251,32 @@
   :deep(.arco-card) {
     border-radius: 4px;
   }
+
   :deep(.arco-card-body) {
     width: 100%;
     height: 134px;
     padding: 0;
   }
+
   .content-wrap {
     width: 100%;
     padding: 16px;
     white-space: nowrap;
   }
+
   :deep(.content) {
     float: left;
     width: 108px;
     height: 102px;
   }
+
   :deep(.arco-statistic) {
     .arco-statistic-title {
-      font-size: 16px;
       font-weight: bold;
+      font-size: 16px;
       white-space: nowrap;
     }
+
     .arco-statistic-content {
       margin-top: 10px;
     }
