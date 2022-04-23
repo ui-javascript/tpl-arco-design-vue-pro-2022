@@ -1,36 +1,36 @@
 <template>
   <div class="container">
     <Breadcrumb :items="['menu.form', 'menu.form.step']" />
-    <a-spin :loading="loading" style="width: 100%">
-      <a-card class="general-card">
+    <ASpin :loading="loading" style="width: 100%">
+      <ACard class="general-card">
         <template #title>
           {{ $t('stepForm.step.title') }}
         </template>
         <div class="wrapper">
-          <a-steps
+          <ASteps
             v-model:current="step"
             style="width: 580px"
             line-less
             class="steps"
           >
-            <a-step :description="$t('stepForm.step.subTitle.baseInfo')">
+            <AStep :description="$t('stepForm.step.subTitle.baseInfo')">
               {{ $t('stepForm.step.title.baseInfo') }}
-            </a-step>
-            <a-step :description="$t('stepForm.step.subTitle.channel')">
+            </AStep>
+            <AStep :description="$t('stepForm.step.subTitle.channel')">
               {{ $t('stepForm.step.title.channel') }}
-            </a-step>
-            <a-step :description="$t('stepForm.step.subTitle.finish')">
+            </AStep>
+            <AStep :description="$t('stepForm.step.subTitle.finish')">
               {{ $t('stepForm.step.title.finish') }}
-            </a-step>
-          </a-steps>
+            </AStep>
+          </ASteps>
           <keep-alive>
             <BaseInfo v-if="step === 1" @change-step="changeStep" />
             <ChannelInfo v-else-if="step === 2" @change-step="changeStep" />
             <Success v-else-if="step === 3" @change-step="changeStep" />
           </keep-alive>
         </div>
-      </a-card>
-    </a-spin>
+      </ACard>
+    </ASpin>
   </div>
 </template>
 

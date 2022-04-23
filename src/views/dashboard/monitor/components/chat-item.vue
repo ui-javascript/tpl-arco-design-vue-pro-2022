@@ -1,15 +1,15 @@
 <template>
   <div :class="['chat-item', itemData.isCollect ? 'chat-item-collected' : '']">
-    <a-space :size="4" direction="vertical" fill>
-      <a-typography-text type="warning">
+    <ASpace :size="4" direction="vertical" fill>
+      <ATypographyText type="warning">
         {{ itemData.username }}
-      </a-typography-text>
-      <a-typography-text>{{ itemData.content }}</a-typography-text>
+      </ATypographyText>
+      <ATypographyText>{{ itemData.content }}</ATypographyText>
       <div class="chat-item-footer">
         <div class="chat-item-time">
-          <a-typography-text type="secondary">
+          <ATypographyText type="secondary">
             {{ itemData.time }}
-          </a-typography-text>
+          </ATypographyText>
         </div>
         <div class="chat-item-actions">
           <div class="chat-item-actions-item">
@@ -20,7 +20,7 @@
           </div>
         </div>
       </div>
-    </a-space>
+    </ASpace>
   </div>
 </template>
 

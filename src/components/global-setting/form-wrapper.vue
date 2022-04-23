@@ -1,12 +1,12 @@
 <template>
-  <a-input-number
+  <AInputNumber
     v-if="type === 'number'"
     :style="{ width: '80px' }"
     size="small"
     :default-value="defaultValue"
     @change="handleChange"
   />
-  <a-switch
+  <ASwitch
     v-else
     :default-checked="defaultValue"
     size="small"

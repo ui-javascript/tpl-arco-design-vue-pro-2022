@@ -1,12 +1,12 @@
 <template>
   <div v-if="!appStore.navbar" class="fixed-settings" @click="setVisible">
-    <a-button type="primary">
+    <AButton type="primary">
       <template #icon>
         <icon-settings />
       </template>
-    </a-button>
+    </AButton>
   </div>
-  <a-drawer
+  <ADrawer
     :width="300"
     unmount-on-close
     :visible="visible"
@@ -18,8 +18,8 @@
     <template #title> {{ $t('settings.title') }} </template>
     <Block :options="contentOpts" :title="$t('settings.content')" />
     <Block :options="othersOpts" :title="$t('settings.otherSettings')" />
-    <a-alert>{{ $t('settings.alertContent') }}</a-alert>
-  </a-drawer>
+    <AAlert>{{ $t('settings.alertContent') }}</AAlert>
+  </ADrawer>
 </template>
 
 <script lang="ts" setup>
@@ -74,7 +74,7 @@
   .fixed-settings {
     position: fixed;
     top: 280px;
-    right: 0px;
+    right: 0;
 
     svg {
       font-size: 18px;

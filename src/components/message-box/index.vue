@@ -1,26 +1,26 @@
 <template>
-  <a-spin style="display: block" :loading="loading">
-    <a-tabs v-model:activeKey="messageType" type="rounded" destroy-on-hide>
-      <a-tab-pane v-for="item in tabList" :key="item.key">
+  <ASpin style="display: block" :loading="loading">
+    <ATabs v-model:activeKey="messageType" type="rounded" destroy-on-hide>
+      <ATabPane v-for="item in tabList" :key="item.key">
         <template #title>
           <span> {{ item.title }}{{ formatUnreadLength(item.key) }} </span>
         </template>
-        <a-result v-if="!renderList.length" status="404">
+        <AResult v-if="!renderList.length" status="404">
           <template #subtitle> {{ $t('messageBox.noContent') }} </template>
-        </a-result>
+        </AResult>
         <List
           :render-list="renderList"
           :unread-count="unreadCount"
           @item-click="handleItemClick"
         />
-      </a-tab-pane>
+      </ATabPane>
       <template #extra>
-        <a-button type="text" @click="emptyList">
+        <AButton type="text" @click="emptyList">
           {{ $t('messageBox.tab.button') }}
-        </a-button>
+        </AButton>
       </template>
-    </a-tabs>
-  </a-spin>
+    </ATabs>
+  </ASpin>
 </template>
 
 <script lang="ts" setup>

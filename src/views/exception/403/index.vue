@@ -2,14 +2,14 @@
   <div class="container">
     <Breadcrumb :items="['menu.exception', 'menu.exception.403']" />
     <div class="content">
-      <a-result
+      <AResult
         class="result"
         status="403"
         :subtitle="$t('exception.result.403.description')"
       />
-      <a-button key="back" type="primary">
+      <AButton key="back" type="primary">
         {{ $t('exception.result.403.back') }}
-      </a-button>
+      </AButton>
     </div>
   </div>
 </template>
@@ -24,8 +24,9 @@
 
 <style scoped lang="less">
   .container {
-    padding: 0 20px 20px 20px;
     height: calc(100% - 40px);
+    padding: 0 20px 20px 20px;
+
     :deep(.content) {
       position: relative;
       display: flex;

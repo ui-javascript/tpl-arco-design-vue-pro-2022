@@ -1,29 +1,29 @@
 <template>
-  <a-card
+  <ACard
     class="general-card"
     :title="$t('monitor.studioStatus.title.studioStatus')"
   >
     <template #extra>
-      <a-tag color="green">{{ $t('monitor.studioStatus.smooth') }}</a-tag>
+      <ATag color="green">{{ $t('monitor.studioStatus.smooth') }}</ATag>
     </template>
-    <a-descriptions layout="horizontal" :data="dataStatus" :column="2">
+    <ADescriptions layout="horizontal" :data="dataStatus" :column="2">
       <template #label="{ label }">
         <span
           v-if="['mainstream', 'hotStandby', 'coldStandby'].includes(label)"
         >
-          <a-typography-text style="padding-right: 8px">
+          <ATypographyText style="padding-right: 8px">
             {{ $t(`monitor.studioStatus.${label}`) }}
-          </a-typography-text>
+          </ATypographyText>
           {{ $t('monitor.studioStatus.bitRate') }}
         </span>
         <span v-else>{{ label }}</span>
       </template>
-    </a-descriptions>
-    <a-typography-title style="margin-bottom: 16px" :heading="6">
+    </ADescriptions>
+    <ATypographyTitle style="margin-bottom: 16px" :heading="6">
       {{ $t('monitor.studioStatus.title.pictureInfo') }}
-    </a-typography-title>
-    <a-descriptions layout="horizontal" :data="dataPicture" :column="2" />
-  </a-card>
+    </ATypographyTitle>
+    <ADescriptions layout="horizontal" :data="dataPicture" :column="2" />
+  </ACard>
 </template>
 
 <script lang="ts" setup>

@@ -1,6 +1,6 @@
 <template>
-  <a-spin :loading="loading" style="width: 100%">
-    <a-card
+  <ASpin :loading="loading" style="width: 100%">
+    <ACard
       class="general-card"
       :header-style="{ paddingBottom: '0' }"
       :body-style="{ padding: '17px 20px 21px 20px' }"
@@ -9,46 +9,46 @@
         {{ $t('workplace.popularContent') }}
       </template>
       <template #extra>
-        <a-link>{{ $t('workplace.viewMore') }}</a-link>
+        <ALink>{{ $t('workplace.viewMore') }}</ALink>
       </template>
-      <a-space direction="vertical" :size="10" fill>
-        <a-radio-group
+      <ASpace direction="vertical" :size="10" fill>
+        <ARadioGroup
           v-model:model-value="type"
           type="button"
           @change="typeChange"
         >
-          <a-radio value="text">
+          <ARadio value="text">
             {{ $t('workplace.popularContent.text') }}
-          </a-radio>
-          <a-radio value="image">
+          </ARadio>
+          <ARadio value="image">
             {{ $t('workplace.popularContent.image') }}
-          </a-radio>
-          <a-radio value="video">
+          </ARadio>
+          <ARadio value="video">
             {{ $t('workplace.popularContent.video') }}
-          </a-radio>
-        </a-radio-group>
-        <a-table
+          </ARadio>
+        </ARadioGroup>
+        <ATable
           :data="renderList"
           :pagination="false"
           :bordered="false"
           :scroll="{ x: '100%', y: '264px' }"
         >
           <template #columns>
-            <a-table-column title="排名" data-index="key"></a-table-column>
-            <a-table-column title="内容标题" data-index="title">
+            <ATableColumn title="排名" data-index="key"></ATableColumn>
+            <ATableColumn title="内容标题" data-index="title">
               <template #cell="{ record }">
-                <a-typography-paragraph
+                <ATypographyParagraph
                   :ellipsis="{
                     rows: 1,
                   }"
                 >
                   {{ record.title }}
-                </a-typography-paragraph>
+                </ATypographyParagraph>
               </template>
-            </a-table-column>
-            <a-table-column title="点击量" data-index="clickNumber">
-            </a-table-column>
-            <a-table-column
+            </ATableColumn>
+            <ATableColumn title="点击量" data-index="clickNumber">
+            </ATableColumn>
+            <ATableColumn
               title="日涨幅"
               data-index="increases"
               :sortable="{
@@ -64,12 +64,12 @@
                   />
                 </div>
               </template>
-            </a-table-column>
+            </ATableColumn>
           </template>
-        </a-table>
-      </a-space>
-    </a-card>
-  </a-spin>
+        </ATable>
+      </ASpace>
+    </ACard>
+  </ASpin>
 </template>
 
 <script lang="ts" setup>

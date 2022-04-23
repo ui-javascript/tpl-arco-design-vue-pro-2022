@@ -1,5 +1,5 @@
 <template>
-  <a-layout-footer class="footer">Arco Pro</a-layout-footer>
+  <ALayoutFooter class="footer">Arco Pro</ALayoutFooter>
 </template>
 
 <script lang="ts" setup></script>

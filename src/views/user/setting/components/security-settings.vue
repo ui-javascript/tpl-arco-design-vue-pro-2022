@@ -1,92 +1,90 @@
 <template>
-  <a-list :bordered="false">
-    <a-list-item>
-      <a-list-item-meta>
+  <AList :bordered="false">
+    <AListItem>
+      <AListItemMeta>
         <template #avatar>
-          <a-typography-paragraph>
+          <ATypographyParagraph>
             {{ $t('userSetting.SecuritySettings.form.label.password') }}
-          </a-typography-paragraph>
+          </ATypographyParagraph>
         </template>
         <template #description>
           <div class="content">
-            <a-typography-paragraph>
+            <ATypographyParagraph>
               {{ $t('userSetting.SecuritySettings.placeholder.password') }}
-            </a-typography-paragraph>
+            </ATypographyParagraph>
           </div>
           <div class="operation">
-            <a-link>
+            <ALink>
               {{ $t('userSetting.SecuritySettings.button.update') }}
-            </a-link>
+            </ALink>
           </div>
         </template>
-      </a-list-item-meta>
-    </a-list-item>
-    <a-list-item>
-      <a-list-item-meta>
+      </AListItemMeta>
+    </AListItem>
+    <AListItem>
+      <AListItemMeta>
         <template #avatar>
-          <a-typography-paragraph>
+          <ATypographyParagraph>
             {{ $t('userSetting.SecuritySettings.form.label.securityQuestion') }}
-          </a-typography-paragraph>
+          </ATypographyParagraph>
         </template>
         <template #description>
           <div class="content">
-            <a-typography-paragraph class="tip">
+            <ATypographyParagraph class="tip">
               {{
                 $t('userSetting.SecuritySettings.placeholder.securityQuestion')
               }}
-            </a-typography-paragraph>
+            </ATypographyParagraph>
           </div>
           <div class="operation">
-            <a-link>
+            <ALink>
               {{ $t('userSetting.SecuritySettings.button.settings') }}
-            </a-link>
+            </ALink>
           </div>
         </template>
-      </a-list-item-meta>
-    </a-list-item>
-    <a-list-item>
-      <a-list-item-meta>
+      </AListItemMeta>
+    </AListItem>
+    <AListItem>
+      <AListItemMeta>
         <template #avatar>
-          <a-typography-paragraph>
+          <ATypographyParagraph>
             {{ $t('userSetting.SecuritySettings.form.label.phone') }}
-          </a-typography-paragraph>
+          </ATypographyParagraph>
         </template>
         <template #description>
           <div class="content">
-            <a-typography-paragraph>
-              已绑定：150******50
-            </a-typography-paragraph>
+            <ATypographyParagraph> 已绑定：150******50 </ATypographyParagraph>
           </div>
           <div class="operation">
-            <a-link>
+            <ALink>
               {{ $t('userSetting.SecuritySettings.button.update') }}
-            </a-link>
+            </ALink>
           </div>
         </template>
-      </a-list-item-meta>
-    </a-list-item>
-    <a-list-item>
-      <a-list-item-meta>
+      </AListItemMeta>
+    </AListItem>
+    <AListItem>
+      <AListItemMeta>
         <template #avatar>
-          <a-typography-paragraph>
+          <ATypographyParagraph>
             {{ $t('userSetting.SecuritySettings.form.label.email') }}
-          </a-typography-paragraph>
+          </ATypographyParagraph>
         </template>
         <template #description>
           <div class="content">
-            <a-typography-paragraph class="tip">
+            <ATypographyParagraph class="tip">
               {{ $t('userSetting.SecuritySettings.placeholder.email') }}
-            </a-typography-paragraph>
+            </ATypographyParagraph>
           </div>
           <div class="operation">
-            <a-link>
+            <ALink>
               {{ $t('userSetting.SecuritySettings.button.update') }}
-            </a-link>
+            </ALink>
           </div>
         </template>
-      </a-list-item-meta>
-    </a-list-item>
-  </a-list>
+      </AListItemMeta>
+    </AListItem>
+  </AList>
 </template>
 
 <script lang="ts" setup></script>
@@ -94,16 +92,20 @@
 <style scoped lang="less">
   :deep(.arco-list-item) {
     border-bottom: none !important;
+
     .arco-typography {
       margin-bottom: 20px;
     }
+
     .arco-list-item-meta-avatar {
       margin-bottom: 1px;
     }
+
     .arco-list-item-meta {
       padding: 0;
     }
   }
+
   :deep(.arco-list-item-meta-content) {
     flex: 1;
     border-bottom: 1px solid var(--color-neutral-3);
@@ -116,6 +118,7 @@
       .tip {
         color: rgb(var(--gray-6));
       }
+
       .operation {
         margin-right: 6px;
       }

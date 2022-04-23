@@ -1,8 +1,8 @@
 <template>
-  <a-config-provider :locale="locale">
+  <AConfigProvider :locale="locale">
     <router-view />
     <global-setting />
-  </a-config-provider>
+  </AConfigProvider>
 </template>
 
 <script lang="ts" setup>

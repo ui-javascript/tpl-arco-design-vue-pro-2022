@@ -1,11 +1,11 @@
 <template>
-  <a-card
+  <ACard
     class="general-card"
     :title="$t('multiDAnalysis.card.title.contentTypeDistribution')"
     :header-style="{ paddingBottom: 0 }"
   >
     <Chart style="height: 222px" :option="chartOption" />
-  </a-card>
+  </ACard>
 </template>
 
 <script lang="ts" setup>

@@ -1,20 +1,20 @@
 <template>
-  <a-card class="general-card">
+  <ACard class="general-card">
     <template #title>
       {{ $t('basicProfile.title.operationLog') }}
     </template>
-    <a-spin :loading="loading" style="width: 100%">
-      <a-table :data="renderData">
+    <ASpin :loading="loading" style="width: 100%">
+      <ATable :data="renderData">
         <template #columns>
-          <a-table-column
+          <ATableColumn
             :title="$t('basicProfile.column.contentNumber')"
             data-index="contentNumber"
           />
-          <a-table-column
+          <ATableColumn
             :title="$t('basicProfile.column.updateContent')"
             data-index="updateContent"
           />
-          <a-table-column
+          <ATableColumn
             :title="$t('basicProfile.column.status')"
             data-index="status"
           >
@@ -28,22 +28,20 @@
                 <span>{{ $t('basicProfile.cell.pass') }}</span>
               </p>
             </template>
-          </a-table-column>
-          <a-table-column
+          </ATableColumn>
+          <ATableColumn
             :title="$t('basicProfile.column.updateTime')"
             data-index="updateTime"
           />
-          <a-table-column :title="$t('basicProfile.column.operation')">
+          <ATableColumn :title="$t('basicProfile.column.operation')">
             <template #cell>
-              <a-button type="text">{{
-                $t('basicProfile.cell.view')
-              }}</a-button>
+              <AButton type="text">{{ $t('basicProfile.cell.view') }}</AButton>
             </template>
-          </a-table-column>
+          </ATableColumn>
         </template>
-      </a-table>
-    </a-spin>
-  </a-card>
+      </ATable>
+    </ASpin>
+  </ACard>
 </template>
 
 <script lang="ts" setup>

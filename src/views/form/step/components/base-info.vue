@@ -1,12 +1,12 @@
 <template>
-  <a-form
+  <AForm
     ref="formRef"
     :model="formData"
     class="form"
     :label-col-props="{ span: 6 }"
     :wrapper-col-props="{ span: 18 }"
   >
-    <a-form-item
+    <AFormItem
       field="activityName"
       :label="$t('stepForm.form.label.activityName')"
       :rules="[
@@ -20,12 +20,12 @@
         },
       ]"
     >
-      <a-input
+      <AInput
         v-model="formData.activityName"
         :placeholder="$t('stepForm.placeholder.activityName')"
       />
-    </a-form-item>
-    <a-form-item
+    </AFormItem>
+    <AFormItem
       field="channelType"
       :label="$t('stepForm.form.label.channelType')"
       :rules="[
@@ -35,14 +35,14 @@
         },
       ]"
     >
-      <a-select
+      <ASelect
         v-model="formData.channelType"
         :placeholder="$t('stepForm.placeholder.channelType')"
       >
-        <a-option>APP通用渠道</a-option>
-      </a-select>
-    </a-form-item>
-    <a-form-item
+        <AOption>APP通用渠道</AOption>
+      </ASelect>
+    </AFormItem>
+    <AFormItem
       field="promotionTime"
       :label="$t('stepForm.form.label.promotionTime')"
       :rules="[
@@ -52,9 +52,9 @@
         },
       ]"
     >
-      <a-range-picker v-model="formData.promotionTime" />
-    </a-form-item>
-    <a-form-item
+      <ARangePicker v-model="formData.promotionTime" />
+    </AFormItem>
+    <AFormItem
       field="promoteLink"
       :label="$t('stepForm.form.label.promoteLink')"
       :rules="[
@@ -69,20 +69,20 @@
       ]"
       row-class="keep-margin"
     >
-      <a-input
+      <AInput
         v-model="formData.promoteLink"
         :placeholder="$t('stepForm.placeholder.promoteLink')"
       />
       <template #help>
         <span>{{ $t('stepForm.form.tip.promoteLink') }}</span>
       </template>
-    </a-form-item>
-    <a-form-item>
-      <a-button type="primary" @click="onNextClick">
+    </AFormItem>
+    <AFormItem>
+      <AButton type="primary" @click="onNextClick">
         {{ $t('stepForm.button.next') }}
-      </a-button>
-    </a-form-item>
-  </a-form>
+      </AButton>
+    </AFormItem>
+  </AForm>
 </template>
 
 <script lang="ts" setup>

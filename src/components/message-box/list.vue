@@ -1,6 +1,6 @@
 <template>
-  <a-list :bordered="false">
-    <a-list-item
+  <AList :bordered="false">
+    <AListItem
       v-for="item in renderList"
       :key="item.id"
       action-layout="vertical"
@@ -9,65 +9,62 @@
       }"
     >
       <template #extra>
-        <a-tag v-if="item.messageType === 0" color="gray">未开始</a-tag>
-        <a-tag v-else-if="item.messageType === 1" color="green">已开通</a-tag>
-        <a-tag v-else-if="item.messageType === 2" color="blue">进行中</a-tag>
-        <a-tag v-else-if="item.messageType === 3" color="red">即将到期</a-tag>
+        <ATag v-if="item.messageType === 0" color="gray">未开始</ATag>
+        <ATag v-else-if="item.messageType === 1" color="green">已开通</ATag>
+        <ATag v-else-if="item.messageType === 2" color="blue">进行中</ATag>
+        <ATag v-else-if="item.messageType === 3" color="red">即将到期</ATag>
       </template>
       <div class="item-wrap" @click="onItemClick(item)">
-        <a-list-item-meta>
+        <AListItemMeta>
           <template v-if="item.avatar" #avatar>
-            <a-avatar shape="circle">
+            <AAvatar shape="circle">
               <img v-if="item.avatar" :src="item.avatar" />
               <icon-desktop v-else />
-            </a-avatar>
+            </AAvatar>
           </template>
           <template #title>
-            <a-space :size="4">
+            <ASpace :size="4">
               <span>{{ item.title }}</span>
-              <a-typography-text type="secondary">
+              <ATypographyText type="secondary">
                 {{ item.subTitle }}
-              </a-typography-text>
-            </a-space>
+              </ATypographyText>
+            </ASpace>
           </template>
           <template #description>
             <div>
-              <a-typography-paragraph
+              <ATypographyParagraph
                 :ellipsis="{
                   rows: 1,
                 }"
-                >{{ item.content }}</a-typography-paragraph
+                >{{ item.content }}</ATypographyParagraph
               >
-              <a-typography-text
-                v-if="item.type === 'message'"
-                class="time-text"
-              >
+              <ATypographyText v-if="item.type === 'message'" class="time-text">
                 {{ item.time }}
-              </a-typography-text>
+              </ATypographyText>
             </div>
           </template>
-        </a-list-item-meta>
+        </AListItemMeta>
       </div>
-    </a-list-item>
+    </AListItem>
     <template #footer>
-      <a-space
+      <ASpace
         fill
         :size="0"
         :class="{ 'add-border-top': renderList.length < showMax }"
       >
         <div class="footer-wrap">
-          <a-link @click="allRead">{{ $t('messageBox.allRead') }}</a-link>
+          <ALink @click="allRead">{{ $t('messageBox.allRead') }}</ALink>
         </div>
         <div class="footer-wrap">
-          <a-link>{{ $t('messageBox.viewMore') }}</a-link>
+          <ALink>{{ $t('messageBox.viewMore') }}</ALink>
         </div>
-      </a-space>
+      </ASpace>
     </template>
     <div
       v-if="renderList.length && renderList.length < 3"
       :style="{ height: (showMax - renderList.length) * 86 + 'px' }"
     ></div>
-  </a-list>
+  </AList>
 </template>
 
 <script lang="ts" setup>

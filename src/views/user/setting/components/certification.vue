@@ -1,8 +1,8 @@
 <template>
-  <a-spin :loading="loading" style="width: 100%">
+  <ASpin :loading="loading" style="width: 100%">
     <EnterpriseCertification :enterprise-info="data.enterpriseInfo" />
     <CertificationRecords :render-data="data.record" />
-  </a-spin>
+  </ASpin>
 </template>
 
 <script lang="ts" setup>

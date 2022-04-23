@@ -1,11 +1,11 @@
 <template>
-  <a-layout class="layout" :class="{ mobile: appStore.hideMenu }">
+  <ALayout class="layout" :class="{ mobile: appStore.hideMenu }">
     <div v-if="navbar" class="layout-navbar">
       <NavBar />
     </div>
-    <a-layout>
-      <a-layout>
-        <a-layout-sider
+    <ALayout>
+      <ALayout>
+        <ALayoutSider
           v-if="renderMenu"
           v-show="!hideMenu"
           class="layout-sider"
@@ -20,8 +20,8 @@
           <div class="menu-wrapper">
             <Menu />
           </div>
-        </a-layout-sider>
-        <a-drawer
+        </ALayoutSider>
+        <ADrawer
           v-if="hideMenu"
           :visible="drawerVisible"
           placement="left"
@@ -31,17 +31,17 @@
           @cancel="drawerCancel"
         >
           <Menu />
-        </a-drawer>
-        <a-layout class="layout-content" :style="paddingStyle">
+        </ADrawer>
+        <ALayout class="layout-content" :style="paddingStyle">
           <TabBar v-if="appStore.tabBar" />
-          <a-layout-content>
+          <ALayoutContent>
             <PageLayout />
-          </a-layout-content>
+          </ALayoutContent>
           <Footer v-if="footer" />
-        </a-layout>
-      </a-layout>
-    </a-layout>
-  </a-layout>
+        </ALayout>
+      </ALayout>
+    </ALayout>
+  </ALayout>
 </template>
 
 <script lang="ts" setup>
@@ -125,6 +125,7 @@
     z-index: 99;
     height: 100%;
     transition: all 0.2s cubic-bezier(0.34, 0.69, 0.1, 1);
+
     &::after {
       position: absolute;
       top: 0;
@@ -145,6 +146,7 @@
     height: 100%;
     overflow: auto;
     overflow-x: hidden;
+
     :deep(.arco-menu) {
       ::-webkit-scrollbar {
         width: 12px;
@@ -152,10 +154,10 @@
       }
 
       ::-webkit-scrollbar-thumb {
-        border: 4px solid transparent;
-        background-clip: padding-box;
-        border-radius: 7px;
         background-color: var(--color-text-4);
+        background-clip: padding-box;
+        border: 4px solid transparent;
+        border-radius: 7px;
       }
 
       ::-webkit-scrollbar-thumb:hover {

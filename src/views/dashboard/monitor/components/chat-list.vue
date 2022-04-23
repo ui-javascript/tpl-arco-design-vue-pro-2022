@@ -1,7 +1,7 @@
 <template>
   <div class="chat-list">
     <ChatItem v-for="item in renderList" :key="item.id" :item-data="item" />
-    <a-result v-if="!renderList.length" status="404" />
+    <AResult v-if="!renderList.length" status="404" />
   </div>
 </template>
 

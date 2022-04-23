@@ -1,10 +1,10 @@
 <template>
-  <a-card
+  <ACard
     class="general-card"
     :title="$t('multiDAnalysis.card.title.userActions')"
   >
     <Chart height="122px" :option="chartOption" />
-  </a-card>
+  </ACard>
 </template>
 
 <script lang="ts" setup>

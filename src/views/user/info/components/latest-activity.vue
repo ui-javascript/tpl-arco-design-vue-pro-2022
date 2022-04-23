@@ -1,43 +1,43 @@
 <template>
-  <a-card class="general-card" :title="$t('userInfo.title.latestActivity')">
+  <ACard class="general-card" :title="$t('userInfo.title.latestActivity')">
     <template #extra>
-      <a-link>{{ $t('userInfo.viewAll') }}</a-link>
+      <ALink>{{ $t('userInfo.viewAll') }}</ALink>
     </template>
-    <a-list :bordered="false">
-      <a-list-item
+    <AList :bordered="false">
+      <AListItem
         v-for="activity in activityList"
         :key="activity.id"
         action-layout="horizontal"
       >
-        <a-skeleton
+        <ASkeleton
           v-if="loading"
           :loading="loading"
           :animation="true"
           class="skeleton-item"
         >
-          <a-row :gutter="6">
-            <a-col :span="2">
-              <a-skeleton-shape shape="circle" />
-            </a-col>
-            <a-col :span="22">
-              <a-skeleton-line :widths="['40%', '100%']" :rows="2" />
-            </a-col>
-          </a-row>
-        </a-skeleton>
-        <a-list-item-meta
+          <ARow :gutter="6">
+            <ACol :span="2">
+              <ASkeletonShape shape="circle" />
+            </ACol>
+            <ACol :span="22">
+              <ASkeletonLine :widths="['40%', '100%']" :rows="2" />
+            </ACol>
+          </ARow>
+        </ASkeleton>
+        <AListItemMeta
           v-else
           :title="activity.title"
           :description="activity.description"
         >
           <template #avatar>
-            <a-avatar>
+            <AAvatar>
               <img :src="activity.avatar" />
-            </a-avatar>
+            </AAvatar>
           </template>
-        </a-list-item-meta>
-      </a-list-item>
-    </a-list>
-  </a-card>
+        </AListItemMeta>
+      </AListItem>
+    </AList>
+  </ACard>
 </template>
 
 <script lang="ts" setup>

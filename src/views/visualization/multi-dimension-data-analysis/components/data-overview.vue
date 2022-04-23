@@ -1,12 +1,12 @@
 <template>
-  <a-spin :loading="loading" style="width: 100%">
-    <a-card
+  <ASpin :loading="loading" style="width: 100%">
+    <ACard
       class="general-card"
       :title="$t('multiDAnalysis.card.title.dataOverview')"
     >
-      <a-row justify="space-between">
-        <a-col v-for="(item, idx) in renderData" :key="idx" :span="6">
-          <a-statistic
+      <ARow justify="space-between">
+        <ACol v-for="(item, idx) in renderData" :key="idx" :span="6">
+          <AStatistic
             :title="item.title"
             :value="item.value"
             show-group-separator
@@ -24,12 +24,12 @@
                 />
               </span>
             </template>
-          </a-statistic>
-        </a-col>
-      </a-row>
+          </AStatistic>
+        </ACol>
+      </ARow>
       <Chart style="height: 328px; margin-top: 20px" :option="chartOption" />
-    </a-card>
-  </a-spin>
+    </ACard>
+  </ASpin>
 </template>
 
 <script lang="ts" setup>

@@ -1,7 +1,7 @@
 <template>
   <div class="item-container">
-    <a-space :size="16" direction="vertical" fill>
-      <a-descriptions
+    <ASpace :size="16" direction="vertical" fill>
+      <ADescriptions
         v-for="(item, idx) in blockDataList"
         :key="idx"
         :label-style="{
@@ -15,13 +15,13 @@
         :data="item.data"
       >
         <template #value="{ value }">
-          <a-skeleton v-if="loading" :animation="true">
-            <a-skeleton-line :widths="['200px']" :rows="1" />
-          </a-skeleton>
+          <ASkeleton v-if="loading" :animation="true">
+            <ASkeletonLine :widths="['200px']" :rows="1" />
+          </ASkeleton>
           <span v-else>{{ value }}</span>
         </template>
-      </a-descriptions>
-    </a-space>
+      </ADescriptions>
+    </ASpace>
   </div>
 </template>
 

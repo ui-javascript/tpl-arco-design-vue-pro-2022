@@ -1,37 +1,34 @@
 <template>
   <div class="navbar">
     <div class="left-side">
-      <a-space>
+      <ASpace>
         <img
           alt="logo"
           src="//p3-armor.byteimg.com/tos-cn-i-49unhts6dw/dfdba5317c0c20ce20e64fac803d52bc.svg~tplv-49unhts6dw-image.image"
         />
-        <a-typography-title
-          :style="{ margin: 0, fontSize: '18px' }"
-          :heading="5"
-        >
+        <ATypographyTitle :style="{ margin: 0, fontSize: '18px' }" :heading="5">
           Arco Pro
-        </a-typography-title>
+        </ATypographyTitle>
         <icon-menu-fold
           v-if="appStore.device === 'mobile'"
           style="font-size: 22px; cursor: pointer"
           @click="toggleDrawerMenu"
         />
-      </a-space>
+      </ASpace>
     </div>
     <ul class="right-side">
       <li>
-        <a-tooltip :content="$t('settings.search')">
-          <a-button class="nav-btn" type="outline" :shape="'circle'">
+        <ATooltip :content="$t('settings.search')">
+          <AButton class="nav-btn" type="outline" :shape="'circle'">
             <template #icon>
               <icon-search />
             </template>
-          </a-button>
-        </a-tooltip>
+          </AButton>
+        </ATooltip>
       </li>
       <li>
-        <a-tooltip :content="$t('settings.language')">
-          <a-button
+        <ATooltip :content="$t('settings.language')">
+          <AButton
             class="nav-btn"
             type="outline"
             :shape="'circle'"
@@ -40,30 +37,30 @@
             <template #icon>
               <icon-language />
             </template>
-          </a-button>
-        </a-tooltip>
-        <a-dropdown trigger="click" @select="changeLocale">
+          </AButton>
+        </ATooltip>
+        <ADropdown trigger="click" @select="changeLocale">
           <div ref="triggerBtn" class="trigger-btn"></div>
           <template #content>
-            <a-doption
+            <ADoption
               v-for="item in locales"
               :key="item.value"
               :value="item.value"
             >
               {{ item.label }}
-            </a-doption>
+            </ADoption>
           </template>
-        </a-dropdown>
+        </ADropdown>
       </li>
       <li>
-        <a-tooltip
+        <ATooltip
           :content="
             theme === 'light'
               ? $t('settings.navbar.theme.toDark')
               : $t('settings.navbar.theme.toLight')
           "
         >
-          <a-button
+          <AButton
             class="nav-btn"
             type="outline"
             :shape="'circle'"
@@ -73,25 +70,25 @@
               <icon-moon-fill v-if="theme === 'dark'" />
               <icon-sun-fill v-else />
             </template>
-          </a-button>
-        </a-tooltip>
+          </AButton>
+        </ATooltip>
       </li>
       <li>
-        <a-tooltip :content="$t('settings.navbar.alerts')">
+        <ATooltip :content="$t('settings.navbar.alerts')">
           <div class="message-box-trigger">
-            <a-badge :count="9" dot>
-              <a-button
+            <ABadge :count="9" dot>
+              <AButton
                 class="nav-btn"
                 type="outline"
                 :shape="'circle'"
                 @click="setPopoverVisible"
               >
                 <icon-notification />
-              </a-button>
-            </a-badge>
+              </AButton>
+            </ABadge>
           </div>
-        </a-tooltip>
-        <a-popover
+        </ATooltip>
+        <APopover
           trigger="click"
           :arrow-style="{ display: 'none' }"
           :content-style="{ padding: 0, minWidth: '400px' }"
@@ -101,11 +98,11 @@
           <template #content>
             <message-box />
           </template>
-        </a-popover>
+        </APopover>
       </li>
       <li>
-        <a-tooltip :content="$t('settings.title')">
-          <a-button
+        <ATooltip :content="$t('settings.title')">
+          <AButton
             class="nav-btn"
             type="outline"
             :shape="'circle'"
@@ -114,52 +111,52 @@
             <template #icon>
               <icon-settings />
             </template>
-          </a-button>
-        </a-tooltip>
+          </AButton>
+        </ATooltip>
       </li>
       <li>
-        <a-dropdown trigger="click">
-          <a-avatar
+        <ADropdown trigger="click">
+          <AAvatar
             :size="32"
             :style="{ marginRight: '8px', cursor: 'pointer' }"
           >
             <img alt="avatar" :src="avatar" />
-          </a-avatar>
+          </AAvatar>
           <template #content>
-            <a-doption>
-              <a-space @click="switchRoles">
+            <ADoption>
+              <ASpace @click="switchRoles">
                 <icon-tag />
                 <span>
                   {{ $t('messageBox.switchRoles') }}
                 </span>
-              </a-space>
-            </a-doption>
-            <a-doption>
-              <a-space @click="$router.push({ name: 'Info' })">
+              </ASpace>
+            </ADoption>
+            <ADoption>
+              <ASpace @click="$router.push({ name: 'Info' })">
                 <icon-user />
                 <span>
                   {{ $t('messageBox.userCenter') }}
                 </span>
-              </a-space>
-            </a-doption>
-            <a-doption>
-              <a-space @click="$router.push({ name: 'Setting' })">
+              </ASpace>
+            </ADoption>
+            <ADoption>
+              <ASpace @click="$router.push({ name: 'Setting' })">
                 <icon-settings />
                 <span>
                   {{ $t('messageBox.userSettings') }}
                 </span>
-              </a-space>
-            </a-doption>
-            <a-doption>
-              <a-space @click="handleLogout">
+              </ASpace>
+            </ADoption>
+            <ADoption>
+              <ASpace @click="handleLogout">
                 <icon-export />
                 <span>
                   {{ $t('messageBox.logout') }}
                 </span>
-              </a-space>
-            </a-doption>
+              </ASpace>
+            </ADoption>
           </template>
-        </a-dropdown>
+        </ADropdown>
       </li>
     </ul>
   </div>

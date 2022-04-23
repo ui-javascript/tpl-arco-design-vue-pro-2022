@@ -1,14 +1,14 @@
 <template>
-  <a-card class="general-card" :title="$t('userInfo.title.latestNotification')">
-    <a-skeleton v-if="loading" :animation="true">
-      <a-skeleton-line :rows="3" />
-    </a-skeleton>
-    <a-result v-else status="404">
+  <ACard class="general-card" :title="$t('userInfo.title.latestNotification')">
+    <ASkeleton v-if="loading" :animation="true">
+      <ASkeletonLine :rows="3" />
+    </ASkeleton>
+    <AResult v-else status="404">
       <template #subtitle>
         {{ $t('userInfo.nodata') }}
       </template>
-    </a-result>
-  </a-card>
+    </AResult>
+  </ACard>
 </template>
 
 <script lang="ts" setup>

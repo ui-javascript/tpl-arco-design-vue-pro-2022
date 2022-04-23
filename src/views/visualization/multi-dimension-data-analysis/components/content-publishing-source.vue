@@ -1,12 +1,12 @@
 <template>
-  <a-spin :loading="loading" style="width: 100%">
-    <a-card
+  <ASpin :loading="loading" style="width: 100%">
+    <ACard
       class="general-card"
       :title="$t('multiDAnalysis.card.title.contentPublishingSource')"
     >
       <Chart style="width: 100%; height: 300px" :option="chartOption" />
-    </a-card>
-  </a-spin>
+    </ACard>
+  </ASpin>
 </template>
 
 <script lang="ts" setup>

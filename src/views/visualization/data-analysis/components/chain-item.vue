@@ -1,9 +1,9 @@
 <template>
-  <a-spin :loading="loading" style="width: 100%">
-    <a-card :bordered="false" :style="cardStyle">
+  <ASpin :loading="loading" style="width: 100%">
+    <ACard :bordered="false" :style="cardStyle">
       <div class="content-wrap">
         <div class="content">
-          <a-statistic
+          <AStatistic
             :title="title"
             :value="renderData.count"
             :value-from="0"
@@ -11,21 +11,21 @@
             show-group-separator
           />
           <div class="desc">
-            <a-typography-text type="secondary" class="label">
+            <ATypographyText type="secondary" class="label">
               {{ $t('dataAnalysis.card.yesterday') }}
-            </a-typography-text>
-            <a-typography-text type="danger">
+            </ATypographyText>
+            <ATypographyText type="danger">
               {{ renderData.growth }}
               <icon-arrow-rise />
-            </a-typography-text>
+            </ATypographyText>
           </div>
         </div>
         <div class="chart">
           <Chart v-if="!loading" :option="chartOption" />
         </div>
       </div>
-    </a-card>
-  </a-spin>
+    </ACard>
+  </ASpin>
 </template>
 
 <script lang="ts" setup>

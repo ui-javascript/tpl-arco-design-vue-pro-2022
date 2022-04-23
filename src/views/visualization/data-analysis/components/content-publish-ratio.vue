@@ -1,15 +1,15 @@
 <template>
-  <a-spin :loading="loading" style="width: 100%">
-    <a-card class="general-card" :header-style="{ paddingBottom: '14px' }">
+  <ASpin :loading="loading" style="width: 100%">
+    <ACard class="general-card" :header-style="{ paddingBottom: '14px' }">
       <template #title>
         {{ $t('dataAnalysis.contentPublishRatio') }}
       </template>
       <template #extra>
-        <a-link>{{ $t('workplace.viewMore') }}</a-link>
+        <ALink>{{ $t('workplace.viewMore') }}</ALink>
       </template>
       <Chart style="width: 100%; height: 347px" :option="chartOption" />
-    </a-card>
-  </a-spin>
+    </ACard>
+  </ASpin>
 </template>
 
 <script lang="ts" setup>

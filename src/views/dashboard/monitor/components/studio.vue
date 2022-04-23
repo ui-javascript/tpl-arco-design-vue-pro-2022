@@ -1,5 +1,5 @@
 <template>
-  <a-card class="general-card" :title="$t('monitor.title.studioPreview')">
+  <ACard class="general-card" :title="$t('monitor.title.studioPreview')">
     <template #extra>
       <icon-more />
     </template>
@@ -10,21 +10,21 @@
       />
       <div class="studio-bar">
         <div v-if="userInfo">
-          <a-space :size="12">
-            <a-avatar :size="24">
+          <ASpace :size="12">
+            <AAvatar :size="24">
               <img :src="userInfo.avatar" />
-            </a-avatar>
-            <a-typography-text>
+            </AAvatar>
+            <ATypographyText>
               {{ userInfo.name }} {{ $t('monitor.studioPreview.studio') }}
-            </a-typography-text>
-          </a-space>
+            </ATypographyText>
+          </ASpace>
         </div>
-        <a-typography-text type="secondary">
+        <ATypographyText type="secondary">
           36,000 {{ $t('monitor.studioPreview.watching') }}
-        </a-typography-text>
+        </ATypographyText>
       </div>
     </div>
-  </a-card>
+  </ACard>
 </template>
 
 <script lang="ts" setup>
@@ -37,9 +37,9 @@
   .studio {
     &-preview {
       display: block;
+      width: 100%;
       max-width: 600px;
       margin: 0 auto;
-      width: 100%;
     }
 
     &-bar {

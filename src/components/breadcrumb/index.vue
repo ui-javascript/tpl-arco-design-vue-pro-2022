@@ -1,12 +1,12 @@
 <template>
-  <a-breadcrumb class="container-breadcrumb">
-    <a-breadcrumb-item>
+  <ABreadcrumb class="container-breadcrumb">
+    <ABreadcrumbItem>
       <icon-apps />
-    </a-breadcrumb-item>
-    <a-breadcrumb-item v-for="item in items" :key="item">
+    </ABreadcrumbItem>
+    <ABreadcrumbItem v-for="item in items" :key="item">
       {{ $t(item) }}
-    </a-breadcrumb-item>
-  </a-breadcrumb>
+    </ABreadcrumbItem>
+  </ABreadcrumb>
 </template>
 
 <script lang="ts" setup>
@@ -25,8 +25,10 @@
 <style scoped lang="less">
   .container-breadcrumb {
     margin: 16px 0;
+
     :deep(.arco-breadcrumb-item) {
       color: rgb(var(--gray-6));
+
       &:last-child {
         color: rgb(var(--gray-8));
       }

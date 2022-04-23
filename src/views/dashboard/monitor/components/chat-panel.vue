@@ -1,5 +1,5 @@
 <template>
-  <a-card
+  <ACard
     class="general-card chat-panel"
     :title="$t('monitor.title.chatPanel')"
     :bordered="false"
@@ -11,35 +11,35 @@
       flexFlow: 'column',
     }"
   >
-    <a-space :size="8">
-      <a-select style="width: 86px" default-value="all">
-        <a-option value="all">
+    <ASpace :size="8">
+      <ASelect style="width: 86px" default-value="all">
+        <AOption value="all">
           {{ $t('monitor.chat.options.all') }}
-        </a-option>
-      </a-select>
-      <a-input-search
+        </AOption>
+      </ASelect>
+      <AInputSearch
         :placeholder="$t('monitor.chat.placeholder.searchCategory')"
       />
-      <a-button type="text">
+      <AButton type="text">
         <icon-download />
-      </a-button>
-    </a-space>
+      </AButton>
+    </ASpace>
     <div class="chat-panel-content">
-      <a-spin :loading="loading" style="width: 100%">
+      <ASpin :loading="loading" style="width: 100%">
         <ChatList :render-list="chatData" />
-      </a-spin>
+      </ASpin>
     </div>
     <div class="chat-panel-footer">
-      <a-space :size="8">
-        <a-Input>
+      <ASpace :size="8">
+        <AInput>
           <template #suffix>
             <icon-face-smile-fill />
           </template>
-        </a-Input>
-        <a-button type="primary">{{ $t('monitor.chat.update') }}</a-button>
-      </a-space>
+        </AInput>
+        <AButton type="primary">{{ $t('monitor.chat.update') }}</AButton>
+      </ASpace>
     </div>
-  </a-card>
+  </ACard>
 </template>
 
 <script lang="ts" setup>

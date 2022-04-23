@@ -1,10 +1,10 @@
 <template>
-  <a-card class="general-card" :title="$t('userInfo.title.myProject')">
+  <ACard class="general-card" :title="$t('userInfo.title.myProject')">
     <template #extra>
-      <a-link>{{ $t('userInfo.showMore') }}</a-link>
+      <ALink>{{ $t('userInfo.showMore') }}</ALink>
     </template>
-    <a-row :gutter="16">
-      <a-col
+    <ARow :gutter="16">
+      <ACol
         v-for="(project, index) in projectList"
         :key="index"
         :xs="12"
@@ -15,35 +15,35 @@
         :xxl="8"
         class="my-project-item"
       >
-        <a-card>
-          <a-skeleton v-if="loading" :loading="loading" :animation="true">
-            <a-skeleton-line :rows="3" />
-          </a-skeleton>
-          <a-space v-else direction="vertical">
-            <a-typography-text bold>{{ project.name }}</a-typography-text>
-            <a-typography-text type="secondary">
+        <ACard>
+          <ASkeleton v-if="loading" :loading="loading" :animation="true">
+            <ASkeletonLine :rows="3" />
+          </ASkeleton>
+          <ASpace v-else direction="vertical">
+            <ATypographyText bold>{{ project.name }}</ATypographyText>
+            <ATypographyText type="secondary">
               {{ project.description }}
-            </a-typography-text>
-            <a-space>
-              <a-avatar-group :size="24">
+            </ATypographyText>
+            <ASpace>
+              <AAvatarGroup :size="24">
                 {{ project.contributors }}
-                <a-avatar
+                <AAvatar
                   v-for="(contributor, idx) in project.contributors"
                   :key="idx"
                   :size="32"
                 >
                   <img alt="avatar" :src="contributor.avatar" />
-                </a-avatar>
-              </a-avatar-group>
-              <a-typography-text type="secondary">
+                </AAvatar>
+              </AAvatarGroup>
+              <ATypographyText type="secondary">
                 等{{ project.peopleNumber }}人
-              </a-typography-text>
-            </a-space>
-          </a-space>
-        </a-card>
-      </a-col>
-    </a-row>
-  </a-card>
+              </ATypographyText>
+            </ASpace>
+          </ASpace>
+        </ACard>
+      </ACol>
+    </ARow>
+  </ACard>
 </template>
 
 <script lang="ts" setup>

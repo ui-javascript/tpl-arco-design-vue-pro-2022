@@ -6,17 +6,17 @@
         <ChatPanel />
       </div>
       <div class="layout-content">
-        <a-space :size="16" direction="vertical" fill>
+        <ASpace :size="16" direction="vertical" fill>
           <Studio />
           <DataStatistic />
-        </a-space>
+        </ASpace>
       </div>
       <div class="layout-right-side">
-        <a-space :size="16" direction="vertical" fill>
+        <ASpace :size="16" direction="vertical" fill>
           <StudioStatus />
           <QuickOperation />
           <StudioInformation />
-        </a-space>
+        </ASpace>
       </div>
     </div>
   </div>
@@ -65,6 +65,7 @@
   @media (max-width: @screen-lg) {
     .layout {
       flex-wrap: wrap;
+
       &-left-side {
         flex: 1;
         flex-basis: 100%;
@@ -74,9 +75,9 @@
       &-content {
         flex: none;
         flex-basis: 100%;
-        padding: 0;
         order: -1;
         margin-bottom: 16px;
+        padding: 0;
       }
 
       &-right-side {

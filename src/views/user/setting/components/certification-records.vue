@@ -1,23 +1,23 @@
 <template>
-  <a-card
+  <ACard
     class="general-card"
     :title="$t('userSetting.certification.title.record')"
     :header-style="{ border: 'none' }"
   >
-    <a-table v-if="renderData.length" :data="renderData">
+    <ATable v-if="renderData.length" :data="renderData">
       <template #columns>
-        <a-table-column
+        <ATableColumn
           :title="$t('userSetting.certification.columns.certificationType')"
         >
           <template #cell>
             {{ $t('userSetting.certification.cell.certificationType') }}
           </template>
-        </a-table-column>
-        <a-table-column
+        </ATableColumn>
+        <ATableColumn
           :title="$t('userSetting.certification.columns.certificationContent')"
           data-index="certificationContent"
         />
-        <a-table-column :title="$t('userSetting.certification.columns.status')">
+        <ATableColumn :title="$t('userSetting.certification.columns.status')">
           <template #cell="{ record }">
             <p v-if="record.status === 0">
               <span class="circle"></span>
@@ -28,28 +28,28 @@
               <span>{{ $t('userSetting.certification.cell.pass') }}</span>
             </p>
           </template>
-        </a-table-column>
-        <a-table-column
+        </ATableColumn>
+        <ATableColumn
           :title="$t('userSetting.certification.columns.time')"
           data-index="time"
         />
-        <a-table-column
+        <ATableColumn
           :title="$t('userSetting.certification.columns.operation')"
         >
           <template #cell="{ record }">
-            <a-space>
-              <a-button type="text">
+            <ASpace>
+              <AButton type="text">
                 {{ $t('userSetting.certification.button.check') }}
-              </a-button>
-              <a-button v-if="record.status === 0" type="text">
+              </AButton>
+              <AButton v-if="record.status === 0" type="text">
                 {{ $t('userSetting.certification.button.withdraw') }}
-              </a-button>
-            </a-space>
+              </AButton>
+            </ASpace>
           </template>
-        </a-table-column>
+        </ATableColumn>
       </template>
-    </a-table>
-  </a-card>
+    </ATable>
+  </ACard>
 </template>
 
 <script lang="ts" setup>

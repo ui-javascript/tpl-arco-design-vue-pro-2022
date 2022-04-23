@@ -1,12 +1,12 @@
 <template>
-  <a-form
+  <AForm
     ref="formRef"
     :model="formData"
     class="form"
     :label-col-props="{ span: 6 }"
     :wrapper-col-props="{ span: 18 }"
   >
-    <a-form-item
+    <AFormItem
       field="advertisingSource"
       :label="$t('stepForm.form.label.advertisingSource')"
       :rules="[
@@ -16,12 +16,12 @@
         },
       ]"
     >
-      <a-input
+      <AInput
         v-model="formData.advertisingSource"
         :placeholder="$t('stepForm.placeholder.advertisingSource')"
       />
-    </a-form-item>
-    <a-form-item
+    </AFormItem>
+    <AFormItem
       field="advertisingMedia"
       :label="$t('stepForm.form.label.advertisingMedia')"
       :rules="[
@@ -31,35 +31,35 @@
         },
       ]"
     >
-      <a-input
+      <AInput
         v-model="formData.advertisingMedia"
         :placeholder="$t('stepForm.placeholder.advertisingMedia')"
       />
-    </a-form-item>
-    <a-form-item
+    </AFormItem>
+    <AFormItem
       field="keyword"
       :label="$t('stepForm.form.label.keyword')"
       :rules="[
         { required: true, message: $t('stepForm.form.error.keyword.required') },
       ]"
     >
-      <a-select
+      <ASelect
         v-model="formData.keyword"
         :placeholder="$t('stepForm.placeholder.keyword')"
         multiple
       >
-        <a-option>今日头条</a-option>
-        <a-option>火山</a-option>
-      </a-select>
-    </a-form-item>
-    <a-form-item
+        <AOption>今日头条</AOption>
+        <AOption>火山</AOption>
+      </ASelect>
+    </AFormItem>
+    <AFormItem
       field="pushNotify"
       :label="$t('stepForm.form.label.pushNotify')"
       :rules="[{ required: true }]"
     >
-      <a-switch v-model="formData.pushNotify" />
-    </a-form-item>
-    <a-form-item
+      <ASwitch v-model="formData.pushNotify" />
+    </AFormItem>
+    <AFormItem
       field="advertisingContent"
       :label="$t('stepForm.form.label.advertisingContent')"
       :rules="[
@@ -74,25 +74,25 @@
       ]"
       row-class="keep-margin"
     >
-      <a-textarea
+      <ATextarea
         v-model="formData.advertisingContent"
         :placeholder="$t('stepForm.placeholder.advertisingContent')"
       />
-    </a-form-item>
-    <a-form-item>
-      <!-- <a-button type="primary" @click="onNextClick">
+    </AFormItem>
+    <AFormItem>
+      <!-- <AButton type="primary" @click="onNextClick">
         {{ $t('stepForm.button.next') }}
-      </a-button> -->
-      <a-space>
-        <a-button type="secondary" @click="goPrev">
+      </AButton> -->
+      <ASpace>
+        <AButton type="secondary" @click="goPrev">
           {{ $t('stepForm.button.prev') }}
-        </a-button>
-        <a-button type="primary" @click="onNextClick">
+        </AButton>
+        <AButton type="primary" @click="onNextClick">
           {{ $t('stepForm.button.next') }}
-        </a-button>
-      </a-space>
-    </a-form-item>
-  </a-form>
+        </AButton>
+      </ASpace>
+    </AFormItem>
+  </AForm>
 </template>
 
 <script lang="ts" setup>

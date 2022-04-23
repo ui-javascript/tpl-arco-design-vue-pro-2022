@@ -1,132 +1,132 @@
 <template>
   <div class="container">
     <Breadcrumb :items="['menu.list', 'menu.list.searchTable']" />
-    <a-card class="general-card" :title="$t('menu.list.searchTable')">
-      <a-row>
-        <a-col :flex="1">
-          <a-form
+    <ACard class="general-card" :title="$t('menu.list.searchTable')">
+      <ARow>
+        <ACol :flex="1">
+          <AForm
             :model="formModel"
             :label-col-props="{ span: 6 }"
             :wrapper-col-props="{ span: 18 }"
             label-align="left"
           >
-            <a-row :gutter="16">
-              <a-col :span="8">
-                <a-form-item
+            <ARow :gutter="16">
+              <ACol :span="8">
+                <AFormItem
                   field="number"
                   :label="$t('searchTable.form.number')"
                 >
-                  <a-input
+                  <AInput
                     v-model="formModel.number"
                     :placeholder="$t('searchTable.form.number.placeholder')"
                   />
-                </a-form-item>
-              </a-col>
-              <a-col :span="8">
-                <a-form-item field="name" :label="$t('searchTable.form.name')">
-                  <a-input
+                </AFormItem>
+              </ACol>
+              <ACol :span="8">
+                <AFormItem field="name" :label="$t('searchTable.form.name')">
+                  <AInput
                     v-model="formModel.name"
                     :placeholder="$t('searchTable.form.name.placeholder')"
                   />
-                </a-form-item>
-              </a-col>
-              <a-col :span="8">
-                <a-form-item
+                </AFormItem>
+              </ACol>
+              <ACol :span="8">
+                <AFormItem
                   field="contentType"
                   :label="$t('searchTable.form.contentType')"
                 >
-                  <a-select
+                  <ASelect
                     v-model="formModel.contentType"
                     :options="contentTypeOptions"
                     :placeholder="$t('searchTable.form.selectDefault')"
                   />
-                </a-form-item>
-              </a-col>
-              <a-col :span="8">
-                <a-form-item
+                </AFormItem>
+              </ACol>
+              <ACol :span="8">
+                <AFormItem
                   field="filterType"
                   :label="$t('searchTable.form.filterType')"
                 >
-                  <a-select
+                  <ASelect
                     v-model="formModel.filterType"
                     :options="filterTypeOptions"
                     :placeholder="$t('searchTable.form.selectDefault')"
                   />
-                </a-form-item>
-              </a-col>
-              <a-col :span="8">
-                <a-form-item
+                </AFormItem>
+              </ACol>
+              <ACol :span="8">
+                <AFormItem
                   field="createdTime"
                   :label="$t('searchTable.form.createdTime')"
                 >
-                  <a-range-picker
+                  <ARangePicker
                     v-model="formModel.createdTime"
                     style="width: 100%"
                   />
-                </a-form-item>
-              </a-col>
-              <a-col :span="8">
-                <a-form-item
+                </AFormItem>
+              </ACol>
+              <ACol :span="8">
+                <AFormItem
                   field="status"
                   :label="$t('searchTable.form.status')"
                 >
-                  <a-select
+                  <ASelect
                     v-model="formModel.status"
                     :options="statusOptions"
                     :placeholder="$t('searchTable.form.selectDefault')"
                   />
-                </a-form-item>
-              </a-col>
-            </a-row>
-          </a-form>
-        </a-col>
-        <a-divider style="height: 84px" direction="vertical" />
-        <a-col :flex="'86px'" style="text-align: right">
-          <a-space direction="vertical" :size="18">
-            <a-button type="primary" @click="search">
+                </AFormItem>
+              </ACol>
+            </ARow>
+          </AForm>
+        </ACol>
+        <ADivider style="height: 84px" direction="vertical" />
+        <ACol :flex="'86px'" style="text-align: right">
+          <ASpace direction="vertical" :size="18">
+            <AButton type="primary" @click="search">
               <template #icon>
                 <icon-search />
               </template>
               {{ $t('searchTable.form.search') }}
-            </a-button>
-            <a-button @click="reset">
+            </AButton>
+            <AButton @click="reset">
               <template #icon>
                 <icon-refresh />
               </template>
               {{ $t('searchTable.form.reset') }}
-            </a-button>
-          </a-space>
-        </a-col>
-      </a-row>
-      <a-divider style="margin-top: 0" />
-      <a-row style="margin-bottom: 16px">
-        <a-col :span="16">
-          <a-space>
-            <a-button type="primary">
+            </AButton>
+          </ASpace>
+        </ACol>
+      </ARow>
+      <ADivider style="margin-top: 0" />
+      <ARow style="margin-bottom: 16px">
+        <ACol :span="16">
+          <ASpace>
+            <AButton type="primary">
               <template #icon>
                 <icon-plus />
               </template>
               {{ $t('searchTable.operation.create') }}
-            </a-button>
-            <a-upload action="/">
+            </AButton>
+            <AUpload action="/">
               <template #upload-button>
-                <a-button>
+                <AButton>
                   {{ $t('searchTable.operation.import') }}
-                </a-button>
+                </AButton>
               </template>
-            </a-upload>
-          </a-space>
-        </a-col>
-        <a-col :span="8" style="text-align: right">
-          <a-button>
+            </AUpload>
+          </ASpace>
+        </ACol>
+        <ACol :span="8" style="text-align: right">
+          <AButton>
             <template #icon>
               <icon-download />
             </template>
             {{ $t('searchTable.operation.download') }}
-          </a-button>
-        </a-col>
-      </a-row>
-      <a-table
+          </AButton>
+        </ACol>
+      </ARow>
+      <ATable
         row-key="id"
         :loading="loading"
         :pagination="pagination"
@@ -135,21 +135,21 @@
         @page-change="onPageChange"
       >
         <template #columns>
-          <a-table-column
+          <ATableColumn
             :title="$t('searchTable.columns.number')"
             data-index="number"
           />
-          <a-table-column
+          <ATableColumn
             :title="$t('searchTable.columns.name')"
             data-index="name"
           />
-          <a-table-column
+          <ATableColumn
             :title="$t('searchTable.columns.contentType')"
             data-index="contentType"
           >
             <template #cell="{ record }">
-              <a-space>
-                <a-avatar
+              <ASpace>
+                <AAvatar
                   v-if="record.contentType === 'img'"
                   :size="16"
                   shape="square"
@@ -158,8 +158,8 @@
                     alt="avatar"
                     src="//p3-armor.byteimg.com/tos-cn-i-49unhts6dw/581b17753093199839f2e327e726b157.svg~tplv-49unhts6dw-image.image"
                   />
-                </a-avatar>
-                <a-avatar
+                </AAvatar>
+                <AAvatar
                   v-else-if="record.contentType === 'horizontalVideo'"
                   :size="16"
                   shape="square"
@@ -168,34 +168,34 @@
                     alt="avatar"
                     src="//p3-armor.byteimg.com/tos-cn-i-49unhts6dw/77721e365eb2ab786c889682cbc721c1.svg~tplv-49unhts6dw-image.image"
                   />
-                </a-avatar>
-                <a-avatar v-else :size="16" shape="square">
+                </AAvatar>
+                <AAvatar v-else :size="16" shape="square">
                   <img
                     alt="avatar"
                     src="//p3-armor.byteimg.com/tos-cn-i-49unhts6dw/ea8b09190046da0ea7e070d83c5d1731.svg~tplv-49unhts6dw-image.image"
                   />
-                </a-avatar>
+                </AAvatar>
                 {{ $t(`searchTable.form.contentType.${record.contentType}`) }}
-              </a-space>
+              </ASpace>
             </template>
-          </a-table-column>
-          <a-table-column
+          </ATableColumn>
+          <ATableColumn
             :title="$t('searchTable.columns.filterType')"
             data-index="filterType"
           >
             <template #cell="{ record }">
               {{ $t(`searchTable.form.filterType.${record.filterType}`) }}
             </template>
-          </a-table-column>
-          <a-table-column
+          </ATableColumn>
+          <ATableColumn
             :title="$t('searchTable.columns.count')"
             data-index="count"
           />
-          <a-table-column
+          <ATableColumn
             :title="$t('searchTable.columns.createdTime')"
             data-index="createdTime"
           />
-          <a-table-column
+          <ATableColumn
             :title="$t('searchTable.columns.status')"
             data-index="status"
           >
@@ -204,20 +204,20 @@
               <span v-else class="circle pass"></span>
               {{ $t(`searchTable.form.status.${record.status}`) }}
             </template>
-          </a-table-column>
-          <a-table-column
+          </ATableColumn>
+          <ATableColumn
             :title="$t('searchTable.columns.operations')"
             data-index="operations"
           >
             <template #cell>
-              <a-button v-permission="['admin']" type="text" size="small">
+              <AButton v-permission="['admin']" type="text" size="small">
                 {{ $t('searchTable.columns.operations.view') }}
-              </a-button>
+              </AButton>
             </template>
-          </a-table-column>
+          </ATableColumn>
         </template>
-      </a-table>
-    </a-card>
+      </ATable>
+    </ACard>
   </div>
 </template>
 

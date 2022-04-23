@@ -2,50 +2,50 @@
   <div class="container">
     <Breadcrumb :items="['menu.result', 'menu.result.success']" />
     <div class="wrapper">
-      <a-result
+      <AResult
         class="result"
         status="success"
         :title="$t('success.result.title')"
         :subtitle="$t('success.result.subTitle')"
       >
         <template #extra>
-          <a-space class="operation-wrap" :size="16">
-            <a-button key="again" type="secondary">
+          <ASpace class="operation-wrap" :size="16">
+            <AButton key="again" type="secondary">
               {{ $t('success.result.printResult') }}
-            </a-button>
-            <a-button key="back" type="primary">
+            </AButton>
+            <AButton key="back" type="primary">
               {{ $t('success.result.projectList') }}
-            </a-button>
-          </a-space>
+            </AButton>
+          </ASpace>
         </template>
-      </a-result>
+      </AResult>
 
       <div class="steps-wrapper">
-        <a-typography-paragraph bold>{{
+        <ATypographyParagraph bold>{{
           $t('success.result.progress')
-        }}</a-typography-paragraph>
-        <a-steps type="dot" :current="2">
-          <a-step
+        }}</ATypographyParagraph>
+        <ASteps type="dot" :current="2">
+          <AStep
             :title="$t('success.submitApplication')"
             description="2020/10/10 14:00:39"
           />
-          <a-step
+          <AStep
             :title="$t('success.leaderReview')"
             :description="$t('success.processing')"
           />
-          <a-step
+          <AStep
             :title="$t('success.purchaseCertificate')"
             :description="$t('success.waiting')"
           />
-          <a-step
+          <AStep
             :title="$t('success.safetyTest')"
             :description="$t('success.waiting')"
           />
-          <a-step
+          <AStep
             :title="$t('success.launched')"
             :description="$t('success.waiting')"
           />
-        </a-steps>
+        </ASteps>
       </div>
     </div>
   </div>
@@ -63,6 +63,7 @@
   .container {
     padding: 0 20px 20px 20px;
   }
+
   .wrapper {
     padding: 24px 150px;
     background-color: var(--color-bg-2);
@@ -91,6 +92,7 @@
   .mobile {
     .wrapper {
       padding: 24px 10px;
+
       .steps-wrapper {
         transform: scale(0.8);
       }

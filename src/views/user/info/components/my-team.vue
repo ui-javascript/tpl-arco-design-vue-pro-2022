@@ -1,37 +1,37 @@
 <template>
-  <a-card
+  <ACard
     class="general-card"
     :title="$t('userInfo.tab.title.team')"
     :header-style="{ paddingBottom: '18px' }"
     :body-style="{ paddingBottom: '12px' }"
   >
-    <a-list :bordered="false">
-      <a-list-item
+    <AList :bordered="false">
+      <AListItem
         v-for="team in teamList"
         :key="team.id"
         action-layout="horizontal"
       >
-        <a-skeleton v-if="loading" :loading="loading" :animation="true">
-          <a-row :gutter="6">
-            <a-col :span="6">
-              <a-skeleton-shape shape="circle" />
-            </a-col>
-            <a-col :span="16">
-              <a-skeleton-line :widths="['100%', '40%']" :rows="2" />
-            </a-col>
-          </a-row>
-        </a-skeleton>
-        <a-list-item-meta v-else :title="team.name">
+        <ASkeleton v-if="loading" :loading="loading" :animation="true">
+          <ARow :gutter="6">
+            <ACol :span="6">
+              <ASkeletonShape shape="circle" />
+            </ACol>
+            <ACol :span="16">
+              <ASkeletonLine :widths="['100%', '40%']" :rows="2" />
+            </ACol>
+          </ARow>
+        </ASkeleton>
+        <AListItemMeta v-else :title="team.name">
           <template #avatar>
-            <a-avatar>
+            <AAvatar>
               <img :src="team.avatar" />
-            </a-avatar>
+            </AAvatar>
           </template>
           <template #description> 共{{ team.peopleNumber }}人 </template>
-        </a-list-item-meta>
-      </a-list-item>
-    </a-list>
-  </a-card>
+        </AListItemMeta>
+      </AListItem>
+    </AList>
+  </ACard>
 </template>
 
 <script lang="ts" setup>

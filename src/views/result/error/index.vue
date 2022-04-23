@@ -2,40 +2,40 @@
   <div class="container">
     <Breadcrumb :items="['menu.result', 'menu.result.error']" />
     <div class="wrapper">
-      <a-result
+      <AResult
         class="result"
         status="error"
         :title="$t('error.result.title')"
         :subtitle="$t('error.result.subTitle')"
       >
         <template #extra>
-          <a-space class="operation-wrap" :size="16">
-            <a-button key="again" type="secondary">
+          <ASpace class="operation-wrap" :size="16">
+            <AButton key="again" type="secondary">
               {{ $t('error.result.goBack') }}
-            </a-button>
-            <a-button key="back" type="primary">
+            </AButton>
+            <AButton key="back" type="primary">
               {{ $t('error.result.retry') }}
-            </a-button>
-          </a-space>
+            </AButton>
+          </ASpace>
         </template>
-      </a-result>
+      </AResult>
 
       <div class="details-wrapper">
-        <a-typography-title :heading="6" style="margin-top: 0">
+        <ATypographyTitle :heading="6" style="margin-top: 0">
           {{ $t('error.detailTitle') }}
-        </a-typography-title>
-        <a-typography-paragraph style="margin-bottom: 0">
+        </ATypographyTitle>
+        <ATypographyParagraph style="margin-bottom: 0">
           <ol>
             <li>
               {{ $t('error.detailLine.record') }}
-              <a-link>
+              <ALink>
                 <IconLink />
                 {{ $t('error.detailLine.record.link') }}
-              </a-link>
+              </ALink>
             </li>
             <li>{{ $t('error.detailLine.auth') }}</li>
           </ol>
-        </a-typography-paragraph>
+        </ATypographyParagraph>
       </div>
     </div>
   </div>
@@ -53,6 +53,7 @@
   .container {
     padding: 0 20px 20px 20px;
   }
+
   .wrapper {
     padding: 24px 150px;
     background-color: var(--color-bg-2);

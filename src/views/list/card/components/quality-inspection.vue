@@ -1,10 +1,10 @@
 <template>
   <div class="list-wrap">
-    <a-typography-title class="block-title" :heading="6">
+    <ATypographyTitle class="block-title" :heading="6">
       {{ $t('cardList.tab.title.content') }}
-    </a-typography-title>
-    <a-row class="list-row" :gutter="24">
-      <a-col
+    </ATypographyTitle>
+    <ARow class="list-row" :gutter="24">
+      <ACol
         :xs="12"
         :sm="12"
         :md="12"
@@ -14,16 +14,16 @@
         class="list-col"
       >
         <div class="card-wrap empty-wrap">
-          <a-card :bordered="false" hoverable>
-            <a-result :status="null" :title="$t('cardList.content.action')">
+          <ACard :bordered="false" hoverable>
+            <AResult :status="null" :title="$t('cardList.content.action')">
               <template #icon>
                 <icon-plus style="font-size: 20px" />
               </template>
-            </a-result>
-          </a-card>
+            </AResult>
+          </ACard>
         </div>
-      </a-col>
-      <a-col
+      </ACol>
+      <ACol
         v-for="item in renderData"
         :key="item.id"
         class="list-col"
@@ -45,24 +45,24 @@
           :close-txt="$t('cardList.content.delete')"
           :show-tag="false"
         >
-          <a-descriptions
+          <ADescriptions
             style="margin-top: 16px"
             :data="item.data"
             layout="inline-horizontal"
             :column="2"
           />
           <template #skeleton>
-            <a-skeleton :animation="true">
-              <a-skeleton-line
+            <ASkeleton :animation="true">
+              <ASkeletonLine
                 :widths="['50%', '50%', '100%', '40%']"
                 :rows="4"
               />
-              <a-skeleton-line :widths="['40%']" :rows="1" />
-            </a-skeleton>
+              <ASkeletonLine :widths="['40%']" :rows="1" />
+            </ASkeleton>
           </template>
         </CardWrap>
-      </a-col>
-    </a-row>
+      </ACol>
+    </ARow>
   </div>
 </template>
 

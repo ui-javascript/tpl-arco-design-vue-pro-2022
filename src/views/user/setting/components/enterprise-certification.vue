@@ -1,13 +1,13 @@
 <template>
-  <a-card
+  <ACard
     class="general-card"
     :title="$t('userSetting.certification.title.enterprise')"
     :header-style="{ padding: '0px 20px 16px 20px' }"
   >
     <template #extra>
-      <a-link>{{ $t('userSetting.certification.extra.enterprise') }}</a-link>
+      <ALink>{{ $t('userSetting.certification.extra.enterprise') }}</ALink>
     </template>
-    <a-descriptions
+    <ADescriptions
       class="card-content"
       :data="renderData"
       :column="3"
@@ -22,17 +22,17 @@
     >
       <template #label="{ label }">{{ $t(label) }} :</template>
       <template #value="{ value, data }">
-        <a-tag
+        <ATag
           v-if="data.label === 'userSetting.certification.label.status'"
           color="green"
           size="small"
         >
           已认证
-        </a-tag>
+        </ATag>
         <span v-else>{{ value }}</span>
       </template>
-    </a-descriptions>
-  </a-card>
+    </ADescriptions>
+  </ACard>
 </template>
 
 <script lang="ts" setup>

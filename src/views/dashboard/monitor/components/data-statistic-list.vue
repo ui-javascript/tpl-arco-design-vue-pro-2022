@@ -1,6 +1,6 @@
 <template>
   <div>
-    <a-table
+    <ATable
       :columns="columns"
       :data="data"
       row-key="id"
@@ -11,10 +11,10 @@
       :border="false"
       :pagination="false"
     />
-    <a-typography-text type="secondary" class="data-statistic-list-tip">
+    <ATypographyText type="secondary" class="data-statistic-list-tip">
       {{ $t('monitor.list.tip.rotations') }} {{ data.length }}
       {{ $t('monitor.list.tip.rest') }}
-    </a-typography-text>
+    </ATypographyText>
   </div>
 </template>
 
@@ -46,9 +46,9 @@
   ];
   const renderTag = (status: number) => {
     if (status === -1) {
-      return `<a-tag  color="red" class='data-statistic-list-cover-tag'>
+      return `<ATag  color="red" class='data-statistic-list-cover-tag'>
             ${t('monitor.list.tag.auditFailed')}
-        </a-tag>`;
+        </ATag>`;
     }
     return '';
   };

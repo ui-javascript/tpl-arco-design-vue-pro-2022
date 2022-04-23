@@ -1,5 +1,5 @@
 <template>
-  <a-card
+  <ACard
     class="general-card"
     :title="$t('workplace.docs')"
     :header-style="{ paddingBottom: 0 }"
@@ -7,31 +7,31 @@
     style="height: 160px"
   >
     <template #extra>
-      <a-link>{{ $t('workplace.viewMore') }}</a-link>
+      <ALink>{{ $t('workplace.viewMore') }}</ALink>
     </template>
-    <a-row>
-      <a-col :span="12">
-        <a-link>
+    <ARow>
+      <ACol :span="12">
+        <ALink>
           {{ $t('workplace.docs.productOverview') }}
-        </a-link>
-      </a-col>
-      <a-col :span="12">
-        <a-link>
+        </ALink>
+      </ACol>
+      <ACol :span="12">
+        <ALink>
           {{ $t('workplace.docs.userGuide') }}
-        </a-link>
-      </a-col>
-      <a-col :span="12">
-        <a-link>
+        </ALink>
+      </ACol>
+      <ACol :span="12">
+        <ALink>
           {{ $t('workplace.docs.workflow') }}
-        </a-link>
-      </a-col>
-      <a-col :span="12">
-        <a-link>
+        </ALink>
+      </ACol>
+      <ACol :span="12">
+        <ALink>
           {{ $t('workplace.docs.interfaceDocs') }}
-        </a-link>
-      </a-col>
-    </a-row>
-  </a-card>
+        </ALink>
+      </ACol>
+    </ARow>
+  </ACard>
 </template>
 
 <style lang="less" scoped>

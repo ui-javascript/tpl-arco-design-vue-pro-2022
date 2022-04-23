@@ -1,22 +1,22 @@
 <template>
-  <a-card
+  <ACard
     class="general-card"
     :title="$t('workplace.announcement')"
     :header-style="{ paddingBottom: '0' }"
     :body-style="{ padding: '15px 20px 13px 20px' }"
   >
     <template #extra>
-      <a-link>{{ $t('workplace.viewMore') }}</a-link>
+      <ALink>{{ $t('workplace.viewMore') }}</ALink>
     </template>
     <div>
       <div v-for="(item, idx) in list" :key="idx" class="item">
-        <a-tag :color="item.type" size="small">{{ item.label }}</a-tag>
+        <ATag :color="item.type" size="small">{{ item.label }}</ATag>
         <span class="item-content">
           {{ item.content }}
         </span>
       </div>
     </div>
-  </a-card>
+  </ACard>
 </template>
 
 <script lang="ts" setup>
@@ -56,15 +56,16 @@
     width: 100%;
     height: 24px;
     margin-bottom: 4px;
+
     .item-content {
       flex: 1;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
       margin-left: 4px;
+      overflow: hidden;
       color: var(--color-text-2);
-      text-decoration: none;
       font-size: 13px;
+      white-space: nowrap;
+      text-decoration: none;
+      text-overflow: ellipsis;
       cursor: pointer;
     }
   }

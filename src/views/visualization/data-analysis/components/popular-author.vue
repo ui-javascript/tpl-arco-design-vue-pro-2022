@@ -1,13 +1,13 @@
 <template>
-  <a-spin :loading="loading" style="width: 100%">
-    <a-card class="general-card" :header-style="{ paddingBottom: '14px' }">
+  <ASpin :loading="loading" style="width: 100%">
+    <ACard class="general-card" :header-style="{ paddingBottom: '14px' }">
       <template #title>
         {{ $t('dataAnalysis.popularAuthor') }}
       </template>
       <template #extra>
-        <a-link>{{ $t('workplace.viewMore') }}</a-link>
+        <ALink>{{ $t('workplace.viewMore') }}</ALink>
       </template>
-      <a-table
+      <ATable
         :data="tableData.list"
         :pagination="false"
         :bordered="false"
@@ -15,36 +15,36 @@
         :scroll="{ x: '100%', y: '350px' }"
       >
         <template #columns>
-          <a-table-column
+          <ATableColumn
             :title="$t('dataAnalysis.popularAuthor.column.ranking')"
             data-index="ranking"
           >
-          </a-table-column>
-          <a-table-column
+          </ATableColumn>
+          <ATableColumn
             :title="$t('dataAnalysis.popularAuthor.column.author')"
             data-index="author"
           >
-          </a-table-column>
-          <a-table-column
+          </ATableColumn>
+          <ATableColumn
             :title="$t('dataAnalysis.popularAuthor.column.content')"
             data-index="contentCount"
             :sortable="{
               sortDirections: ['ascend', 'descend'],
             }"
           >
-          </a-table-column>
-          <a-table-column
+          </ATableColumn>
+          <ATableColumn
             :title="$t('dataAnalysis.popularAuthor.column.click')"
             data-index="clickCount"
             :sortable="{
               sortDirections: ['ascend', 'descend'],
             }"
           >
-          </a-table-column>
+          </ATableColumn>
         </template>
-      </a-table>
-    </a-card>
-  </a-spin>
+      </ATable>
+    </ACard>
+  </ASpin>
 </template>
 
 <script lang="ts" setup>

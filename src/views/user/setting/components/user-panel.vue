@@ -1,7 +1,7 @@
 <template>
-  <a-card :bordered="false">
-    <a-space :size="54">
-      <a-upload
+  <ACard :bordered="false">
+    <ASpace :size="54">
+      <AUpload
         :custom-request="customRequest"
         list-type="picture-card"
         :file-list="fileList"
@@ -10,15 +10,15 @@
         @change="uploadChange"
       >
         <template #upload-button>
-          <a-avatar :size="100" class="info-avatar">
+          <AAvatar :size="100" class="info-avatar">
             <template #trigger-icon>
               <icon-camera />
             </template>
             <img v-if="fileList.length" :src="fileList[0].url" />
-          </a-avatar>
+          </AAvatar>
         </template>
-      </a-upload>
-      <a-descriptions
+      </AUpload>
+      <ADescriptions
         :data="renderData"
         :column="2"
         align="right"
@@ -36,18 +36,18 @@
       >
         <template #label="{ label }">{{ $t(label) }} :</template>
         <template #value="{ value, data }">
-          <a-tag
+          <ATag
             v-if="data.label === 'userSetting.label.certification'"
             color="green"
             size="small"
           >
             已认证
-          </a-tag>
+          </ATag>
           <span v-else>{{ value }}</span>
         </template>
-      </a-descriptions>
-    </a-space>
-  </a-card>
+      </ADescriptions>
+    </ASpace>
+  </ACard>
 </template>
 
 <script lang="ts" setup>

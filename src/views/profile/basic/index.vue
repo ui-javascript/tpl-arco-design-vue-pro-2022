@@ -1,30 +1,30 @@
 <template>
   <div class="container">
     <Breadcrumb :items="['menu.profile', 'menu.profile.basic']" />
-    <a-space direction="vertical" :size="16" fill>
-      <a-card class="general-card" :title="$t('basicProfile.title.form')">
+    <ASpace direction="vertical" :size="16" fill>
+      <ACard class="general-card" :title="$t('basicProfile.title.form')">
         <template #extra>
-          <a-space>
-            <a-button>{{ $t('basicProfile.cancel') }}</a-button>
-            <a-button type="primary">
+          <ASpace>
+            <AButton>{{ $t('basicProfile.cancel') }}</AButton>
+            <AButton type="primary">
               {{ $t('basicProfile.goBack') }}
-            </a-button>
-          </a-space>
+            </AButton>
+          </ASpace>
         </template>
-        <a-steps v-model:current="step" line-less class="steps">
-          <a-step>{{ $t('basicProfile.steps.commit') }}</a-step>
-          <a-step>{{ $t('basicProfile.steps.approval') }}</a-step>
-          <a-step>{{ $t('basicProfile.steps.finish') }}</a-step>
-        </a-steps>
-      </a-card>
-      <a-card class="general-card">
+        <ASteps v-model:current="step" line-less class="steps">
+          <AStep>{{ $t('basicProfile.steps.commit') }}</AStep>
+          <AStep>{{ $t('basicProfile.steps.approval') }}</AStep>
+          <AStep>{{ $t('basicProfile.steps.finish') }}</AStep>
+        </ASteps>
+      </ACard>
+      <ACard class="general-card">
         <ProfileItem :loading="loading" :render-data="currentData" />
-      </a-card>
-      <a-card class="general-card">
+      </ACard>
+      <ACard class="general-card">
         <ProfileItem :loading="preLoading" type="pre" :render-data="preData" />
-      </a-card>
+      </ACard>
       <OperationLog />
-    </a-space>
+    </ASpace>
   </div>
 </template>
 

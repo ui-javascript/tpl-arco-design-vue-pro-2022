@@ -3,35 +3,35 @@
     <div class="login-form-title">{{ $t('login.form.title') }}</div>
     <div class="login-form-sub-title">{{ $t('login.form.title') }}</div>
     <div class="login-form-error-msg">{{ errorMessage }}</div>
-    <a-form
+    <AForm
       ref="loginForm"
       :model="userInfo"
       class="login-form"
       layout="vertical"
       @submit="handleSubmit"
     >
-      <a-form-item
+      <AFormItem
         field="username"
         :rules="[{ required: true, message: $t('login.form.userName.errMsg') }]"
         :validate-trigger="['change', 'blur']"
         hide-label
       >
-        <a-input
+        <AInput
           v-model="userInfo.username"
           :placeholder="$t('login.form.userName.placeholder')"
         >
           <template #prefix>
             <icon-user />
           </template>
-        </a-input>
-      </a-form-item>
-      <a-form-item
+        </AInput>
+      </AFormItem>
+      <AFormItem
         field="password"
         :rules="[{ required: true, message: $t('login.form.password.errMsg') }]"
         :validate-trigger="['change', 'blur']"
         hide-label
       >
-        <a-input-password
+        <AInputPassword
           v-model="userInfo.password"
           :placeholder="$t('login.form.password.placeholder')"
           allow-clear
@@ -39,23 +39,23 @@
           <template #prefix>
             <icon-lock />
           </template>
-        </a-input-password>
-      </a-form-item>
-      <a-space :size="16" direction="vertical">
+        </AInputPassword>
+      </AFormItem>
+      <ASpace :size="16" direction="vertical">
         <div class="login-form-password-actions">
-          <a-checkbox checked="rememberPassword" @change="setRememberPassword">
+          <ACheckbox checked="rememberPassword" @change="setRememberPassword">
             {{ $t('login.form.rememberPassword') }}
-          </a-checkbox>
-          <a-link>{{ $t('login.form.forgetPassword') }}</a-link>
+          </ACheckbox>
+          <ALink>{{ $t('login.form.forgetPassword') }}</ALink>
         </div>
-        <a-button type="primary" html-type="submit" long :loading="loading">
+        <AButton type="primary" html-type="submit" long :loading="loading">
           {{ $t('login.form.login') }}
-        </a-button>
-        <a-button type="text" long class="login-form-register-btn">
+        </AButton>
+        <AButton type="text" long class="login-form-register-btn">
           {{ $t('login.form.register') }}
-        </a-button>
-      </a-space>
-    </a-form>
+        </AButton>
+      </ASpace>
+    </AForm>
   </div>
 </template>
 

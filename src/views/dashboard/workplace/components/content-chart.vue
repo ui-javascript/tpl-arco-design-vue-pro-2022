@@ -1,6 +1,6 @@
 <template>
-  <a-spin :loading="loading" style="width: 100%">
-    <a-card
+  <ASpin :loading="loading" style="width: 100%">
+    <ACard
       class="general-card"
       :header-style="{ paddingBottom: 0 }"
       :body-style="{
@@ -9,11 +9,11 @@
       :title="$t('workplace.contentData')"
     >
       <template #extra>
-        <a-link>{{ $t('workplace.viewMore') }}</a-link>
+        <ALink>{{ $t('workplace.viewMore') }}</ALink>
       </template>
       <Chart height="289px" :option="chartOption" />
-    </a-card>
-  </a-spin>
+    </ACard>
+  </ASpin>
 </template>
 
 <script lang="ts" setup>

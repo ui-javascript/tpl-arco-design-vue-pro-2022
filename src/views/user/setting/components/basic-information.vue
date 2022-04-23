@@ -1,12 +1,12 @@
 <template>
-  <a-form
+  <AForm
     ref="formRef"
     :model="formData"
     class="form"
     :label-col-props="{ span: 8 }"
     :wrapper-col-props="{ span: 16 }"
   >
-    <a-form-item
+    <AFormItem
       field="email"
       :label="$t('userSetting.basicInfo.form.label.email')"
       :rules="[
@@ -16,12 +16,12 @@
         },
       ]"
     >
-      <a-input
+      <AInput
         v-model="formData.email"
         :placeholder="$t('userSetting.basicInfo.placeholder.email')"
       />
-    </a-form-item>
-    <a-form-item
+    </AFormItem>
+    <AFormItem
       field="nickname"
       :label="$t('userSetting.basicInfo.form.label.nickname')"
       :rules="[
@@ -31,12 +31,12 @@
         },
       ]"
     >
-      <a-input
+      <AInput
         v-model="formData.nickname"
         :placeholder="$t('userSetting.basicInfo.placeholder.nickname')"
       />
-    </a-form-item>
-    <a-form-item
+    </AFormItem>
+    <AFormItem
       field="countryRegion"
       :label="$t('userSetting.basicInfo.form.label.countryRegion')"
       :rules="[
@@ -46,14 +46,14 @@
         },
       ]"
     >
-      <a-select
+      <ASelect
         v-model="formData.countryRegion"
         :placeholder="$t('userSetting.basicInfo.placeholder.area')"
       >
-        <a-option value="China">中国</a-option>
-      </a-select>
-    </a-form-item>
-    <a-form-item
+        <AOption value="China">中国</AOption>
+      </ASelect>
+    </AFormItem>
+    <AFormItem
       field="area"
       :label="$t('userSetting.basicInfo.form.label.area')"
       :rules="[
@@ -63,7 +63,7 @@
         },
       ]"
     >
-      <a-cascader
+      <ACascader
         v-model="formData.area"
         :placeholder="$t('userSetting.basicInfo.placeholder.area')"
         :options="[
@@ -86,17 +86,17 @@
         ]"
         allow-clear
       />
-    </a-form-item>
-    <a-form-item
+    </AFormItem>
+    <AFormItem
       field="address"
       :label="$t('userSetting.basicInfo.form.label.address')"
     >
-      <a-input
+      <AInput
         v-model="formData.address"
         :placeholder="$t('userSetting.basicInfo.placeholder.address')"
       />
-    </a-form-item>
-    <a-form-item
+    </AFormItem>
+    <AFormItem
       field="profile"
       :label="$t('userSetting.basicInfo.form.label.profile')"
       :rules="[
@@ -107,22 +107,22 @@
       ]"
       row-class="keep-margin"
     >
-      <a-textarea
+      <ATextarea
         v-model="formData.profile"
         :placeholder="$t('userSetting.basicInfo.placeholder.profile')"
       />
-    </a-form-item>
-    <a-form-item>
-      <a-space>
-        <a-button type="primary" @click="validate">
+    </AFormItem>
+    <AFormItem>
+      <ASpace>
+        <AButton type="primary" @click="validate">
           {{ $t('userSetting.save') }}
-        </a-button>
-        <a-button type="secondary" @click="reset">
+        </AButton>
+        <AButton type="secondary" @click="reset">
           {{ $t('userSetting.reset') }}
-        </a-button>
-      </a-space>
-    </a-form-item>
-  </a-form>
+        </AButton>
+      </ASpace>
+    </AFormItem>
+  </AForm>
 </template>
 
 <script lang="ts" setup>

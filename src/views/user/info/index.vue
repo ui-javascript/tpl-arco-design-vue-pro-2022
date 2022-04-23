@@ -4,24 +4,24 @@
     <UserInfoHeader />
     <div class="content">
       <div class="content-left">
-        <a-grid :cols="24" :col-gap="16" :row-gap="16">
-          <a-grid-item :span="24">
+        <AGrid :cols="24" :col-gap="16" :row-gap="16">
+          <AGridItem :span="24">
             <MyProject />
-          </a-grid-item>
-          <a-grid-item :span="24">
+          </AGridItem>
+          <AGridItem :span="24">
             <LatestActivity />
-          </a-grid-item>
-        </a-grid>
+          </AGridItem>
+        </AGrid>
       </div>
       <div class="content-right">
-        <a-grid :cols="24" :row-gap="16">
-          <a-grid-item :span="24">
+        <AGrid :cols="24" :row-gap="16">
+          <AGridItem :span="24">
             <Myteam />
-          </a-grid-item>
-          <a-grid-item class="panel" :span="24">
+          </AGridItem>
+          <AGridItem class="panel" :span="24">
             <LatestNotification />
-          </a-grid-item>
-        </a-grid>
+          </AGridItem>
+        </AGrid>
       </div>
     </div>
   </div>
@@ -55,7 +55,6 @@
       margin-right: 16px;
       overflow: hidden;
       // background-color: var(--color-bg-2);
-
       :deep(.arco-tabs-nav-tab) {
         margin-left: 16px;
       }
@@ -75,10 +74,12 @@
   .mobile {
     .content {
       display: block;
+
       &-left {
         margin-right: 0;
         margin-bottom: 16px;
       }
+
       &-right {
         width: 100%;
       }

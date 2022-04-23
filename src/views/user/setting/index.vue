@@ -1,26 +1,26 @@
 <template>
   <div class="container">
     <Breadcrumb :items="['menu.user', 'menu.user.setting']" />
-    <a-row style="margin-bottom: 16px">
-      <a-col :span="24">
+    <ARow style="margin-bottom: 16px">
+      <ACol :span="24">
         <UserPanel />
-      </a-col>
-    </a-row>
-    <a-row class="wrapper">
-      <a-col :span="24">
-        <a-tabs default-active-key="1" type="rounded">
-          <a-tab-pane key="1" :title="$t('userSetting.tab.basicInformation')">
+      </ACol>
+    </ARow>
+    <ARow class="wrapper">
+      <ACol :span="24">
+        <ATabs default-active-key="1" type="rounded">
+          <ATabPane key="1" :title="$t('userSetting.tab.basicInformation')">
             <BasicInformation />
-          </a-tab-pane>
-          <a-tab-pane key="2" :title="$t('userSetting.tab.securitySettings')">
+          </ATabPane>
+          <ATabPane key="2" :title="$t('userSetting.tab.securitySettings')">
             <SecuritySettings />
-          </a-tab-pane>
-          <a-tab-pane key="3" :title="$t('userSetting.tab.certification')">
+          </ATabPane>
+          <ATabPane key="3" :title="$t('userSetting.tab.certification')">
             <Certification />
-          </a-tab-pane>
-        </a-tabs>
-      </a-col>
-    </a-row>
+          </ATabPane>
+        </ATabs>
+      </ACol>
+    </ARow>
   </div>
 </template>
 
@@ -43,8 +43,8 @@
   }
 
   .wrapper {
-    padding: 20px 0 0 20px;
     min-height: 580px;
+    padding: 20px 0 0 20px;
     background-color: var(--color-bg-2);
     border-radius: 4px;
   }

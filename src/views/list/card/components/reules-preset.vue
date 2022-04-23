@@ -1,10 +1,10 @@
 <template>
   <div class="list-wrap">
-    <a-typography-title class="block-title" :heading="6">
+    <ATypographyTitle class="block-title" :heading="6">
       {{ $t('cardList.tab.title.preset') }}
-    </a-typography-title>
-    <a-row class="list-row" :gutter="24">
-      <a-col
+    </ATypographyTitle>
+    <ARow class="list-row" :gutter="24">
+      <ACol
         v-for="item in renderData"
         :key="item.id"
         :xs="12"
@@ -25,14 +25,14 @@
           :tag-text="$t('cardList.preset.tag')"
         >
           <template #skeleton>
-            <a-skeleton :animation="true">
-              <a-skeleton-line :widths="['100%', '40%']" :rows="2" />
-              <a-skeleton-line :widths="['40%']" :rows="1" />
-            </a-skeleton>
+            <ASkeleton :animation="true">
+              <ASkeletonLine :widths="['100%', '40%']" :rows="2" />
+              <ASkeletonLine :widths="['40%']" :rows="1" />
+            </ASkeleton>
           </template>
         </CardWrap>
-      </a-col>
-    </a-row>
+      </ACol>
+    </ARow>
   </div>
 </template>
 

@@ -6,21 +6,19 @@
         'menu.visualization.multiDimensionDataAnalysis',
       ]"
     />
-    <a-space direction="vertical" :size="16" fill>
-      <a-grid :cols="24" :col-gap="16" :row-gap="16">
-        <a-grid-item
-          :span="{ xs: 24, sm: 24, md: 24, lg: 18, xl: 18, xxl: 18 }"
-        >
+    <ASpace direction="vertical" :size="16" fill>
+      <AGrid :cols="24" :col-gap="16" :row-gap="16">
+        <AGridItem :span="{ xs: 24, sm: 24, md: 24, lg: 18, xl: 18, xxl: 18 }">
           <DataOverview />
-        </a-grid-item>
-        <a-grid-item :span="{ xs: 24, sm: 24, md: 24, lg: 6, xl: 6, xxl: 6 }">
+        </AGridItem>
+        <AGridItem :span="{ xs: 24, sm: 24, md: 24, lg: 6, xl: 6, xxl: 6 }">
           <UserActions style="margin-bottom: 16px" />
           <ContentTypeDistribution />
-        </a-grid-item>
-      </a-grid>
+        </AGridItem>
+      </AGrid>
       <DataChainGrowth />
       <ContentPublishingSource />
-    </a-space>
+    </ASpace>
   </div>
 </template>
 
