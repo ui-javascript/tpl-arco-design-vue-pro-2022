@@ -1,20 +1,16 @@
 <template>
   <div class="container">
-    <Breadcrumb :items="['menu.{{className}}', 'menu.{{className}}.page']" />
+    <Breadcrumb :items="['menu.ZhihuFriend', 'menu.ZhihuFriend.page']" />
 
-    <div class="content">
-      页面 {{className}}
-    </div>
-  </div>  
+    <div class="content"> 页面 ZhihuFriend </div>
+  </div>
 </template>
 
-<script lang="ts" setup>
- 
-</script>
+<script lang="ts" setup></script>
 
 <script lang="ts">
   export default {
-    name: '{{className}}',
+    name: 'ZhihuFriend',
   };
 </script>
 
@@ -24,7 +20,6 @@
     padding: 0 20px 20px 20px;
 
     .content {
-      
     }
   }
 </style>
