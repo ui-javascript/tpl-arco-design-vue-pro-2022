@@ -1,0 +1,115 @@
+{
+    "projectName": "codegen-demo",
+    "projectPath": "codegen-demo",
+    "enabled": true,    
+    "openFileWhenComplete": false,
+    "templatePath":"",
+    "overrideExists":true,
+    "dataBaseList": [
+        {
+            "dataBaseName": "codegen_tools",
+            "tableNamePrefix": "TB_",
+            "templateList": [
+                {
+                    "templateName": "vue_page.njk",
+                    "outFileType": ".page.vue",
+                    "outPath": "/src/views/demo",
+                    "enabled": true
+                },
+                {
+                    "templateName": "vue_nav.njk",
+                    "outFileType": ".nav.vue",
+                    "outPath": "/src/views/demo",
+                    "enabled": true
+                },
+                {
+                    "templateName": "vue_router.njk",
+                    "outFileType": ".router.ts",
+                    "outPath": "/src/views/demo",
+                    "enabled": true
+                },
+                {
+                    "templateName": "vue_mock.njk",
+                    "outFileType": ".mock.ts",
+                    "outPath": "/src/views/demo",
+                    "enabled": true
+                },
+                {
+                    "templateName": "vue_locale.njk",
+                    "outFileType": ".zh-CN.ts",
+                    "outPath": "/src/views/demo/locale",
+                    "enabled": true
+                },
+                {
+                    "templateName": "vue_locale.njk",
+                    "outFileType": ".en-US.ts",
+                    "outPath": "/src/views/demo/locale",
+                    "enabled": true
+                },
+                {
+                    "templateName": "vue_api.njk",
+                    "outFileType": ".api.ts",
+                    "outPath": "/src/views/demo",
+                    "enabled": true
+                }
+            ],
+            "customsAttributes": {
+                "entityPackageName": "com.example.demo.entity",
+                "mapperPackageName": "com.example.demo.mapper",
+                "servicePackageName": "com.example.demo.service",
+                "serviceImplPackageName": "com.example.demo.service.impl",
+                "controllerPackageName": "com.example.demo.controller"
+            },
+            "customsTypeInterpreterConfig": {
+                "int": {
+                    "result": "Integer"
+                },
+                "tinyint": {
+                    "result": "Integer"
+                },
+                "smallint": {
+                    "result": "Integer"
+                },
+                "varchar": {
+                    "result": "String"
+                },
+                "datetime": {
+                    "result": "Date",
+                    "importTypeName": "java.util.Date"
+                },
+                "timestamp": {
+                    "result": "Date",
+                    "importTypeName": "java.util.Date"
+                },
+                "date": {
+                    "result": "Date",
+                    "importTypeName": "java.util.Date"
+                },
+                "time": {
+                    "result": "Date",
+                    "importTypeName": "java.util.Date"
+                },
+                "decimal": {
+                    "result": "BigDecimal",
+                    "importTypeName": "java.math.BigDecimal"
+                },
+                "bit": {
+                    "result": "Boolean"
+                },
+                "bigint": {
+                    "result": "Long"
+                },
+                "default": {
+                    "result": "String"
+                }
+            }
+        }
+    ],
+    "baseModelProperties": [
+        "id",
+        "dr",
+        "dataVersion",
+        "createTime",
+        "updateTime"
+    ]
+}

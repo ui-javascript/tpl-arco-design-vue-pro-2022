@@ -1,0 +1,23 @@
+export default {
+  path: '{{className}}Nav',
+  name: '{{className}}Nav',
+  component: () => import('@/views/demo/{{className}}.nav.vue'),
+  meta: {
+    locale: 'menu.{{className}}',
+    requiresAuth: true,
+    icon: 'icon-list',
+    // order: 99,
+  },
+  children: [
+    {
+      path: '{{className}}Page',
+      name: '{{className}}Page',
+      component: () => import('@/views/demo/{{className}}.page.vue'),
+      meta: {
+        locale: 'menu.{{className}}.page',
+        requiresAuth: true,
+        roles: ['admin'],
+      },
+    },
+  ]  
+};

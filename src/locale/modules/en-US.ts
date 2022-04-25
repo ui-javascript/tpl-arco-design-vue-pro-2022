@@ -1,5 +1,5 @@
 const modules = import.meta.globEager(
-  '../../{views,components}/**/locale/en-US.ts'
+  '../../{views,components}/**/locale/*en-US.ts'
 );
 const locale = {};
 
