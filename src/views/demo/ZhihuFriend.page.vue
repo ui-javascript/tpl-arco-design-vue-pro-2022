@@ -106,7 +106,7 @@
 </template>
 
 <script lang="ts" setup>
-  import { onMounted, ref } from 'vue';
+  // import { onMounted, ref } from 'vue';
   import { VxePagerEvents, VxeTablePropTypes } from 'vxe-table';
 
   import pageZhihuFriend from './ZhihuFriend.api';
