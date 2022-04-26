@@ -1,18 +1,43 @@
 export const rule = [
   {
     type: 'input',
-    field: 'goods_name',
-    title: '商品名称',
+    field: 'id',
+    title: 'id',
   },
   {
     type: 'input',
-    field: 'goods_name2',
-    title: '商品名称2',
+    field: 'content',
+    title: 'content',
   },
   {
-    type: 'datePicker',
-    field: 'created_at',
-    title: '创建时间',
+    type: 'input',
+    field: 'headline',
+    title: 'headline',
+  },
+  {
+    type: 'input',
+    field: 'name',
+    title: 'name',
+  },
+  {
+    type: 'input',
+    field: 'url',
+    title: 'url',
+  },
+  {
+    type: 'input',
+    field: 'image',
+    title: 'image',
+  },
+  {
+    type: 'input',
+    field: 'is_deleted',
+    title: 'isDeleted',
+  },
+  {
+    type: 'input',
+    field: 'is_picked',
+    title: 'isPicked',
   },
 ];
 

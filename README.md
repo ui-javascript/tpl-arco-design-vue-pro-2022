@@ -1,8 +1,16 @@
 # README
 
-arco design pro vue
+arco design pro vue 模板改造
 
-# 组件正则替换命名
+# 插件
+
+- vscode-easycode
+
+---
+
+# 参考 @ref
+
+- 组件正则替换命名
 
 ```
 <a-(\w+)-(\w+)-(\w+)

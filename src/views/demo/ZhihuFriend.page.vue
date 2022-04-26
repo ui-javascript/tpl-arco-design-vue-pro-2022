@@ -2,19 +2,27 @@
   <div class="container">
     <Breadcrumb :items="['menu.ZhihuFriend', 'menu.ZhihuFriend.page']" />
 
-    <div class="content">
+    <ACard class="general-card" :title="$t('menu.ZhihuFriend.page')">
       <form-create
         v-model="value"
         v-model:api="fApi"
         :rule="rule"
         :option="option"
       ></form-create>
-    </div>
+    </ACard>
   </div>
 </template>
 
 <script lang="ts" setup>
+  import { onMounted } from 'vue';
   import { fApi, value, option, rule } from './ZhihuFriend.page.schema';
+
+  import pageZhihuFriend from './ZhihuFriend.api';
+
+  onMounted(async () => {
+    const res = await pageZhihuFriend({});
+    console.log(res);
+  });
 </script>
 
 <script lang="ts">
@@ -27,10 +35,5 @@
   .container {
     height: calc(100% - 40px);
     padding: 0 20px 20px 20px;
-
-    .content {
-      padding: 30px 20px 20px 20px;
-      background-color: #fff;
-    }
   }
 </style>

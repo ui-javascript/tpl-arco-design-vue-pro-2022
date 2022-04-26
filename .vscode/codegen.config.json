@@ -17,16 +17,22 @@
                     "enabled": true
                 },
                 {
+                    "templateName": "vue_schema.njk",
+                    "outFileType": ".page.schema.ts",
+                    "outPath": "/src/views/demo",
+                    "enabled": true
+                },
+                {
                     "templateName": "vue_nav.njk",
                     "outFileType": ".nav.vue",
                     "outPath": "/src/views/demo",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "templateName": "vue_router.njk",
                     "outFileType": ".router.ts",
                     "outPath": "/src/views/demo",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "templateName": "vue_mock.njk",
@@ -38,13 +44,13 @@
                     "templateName": "vue_locale.njk",
                     "outFileType": ".zh-CN.ts",
                     "outPath": "/src/views/demo/locale",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "templateName": "vue_locale.njk",
                     "outFileType": ".en-US.ts",
                     "outPath": "/src/views/demo/locale",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "templateName": "vue_api.njk",
