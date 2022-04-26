@@ -1,0 +1,1 @@
+import{c as e,e as r}from"./index.6a949e88.js";function n(i){return e.get("/api/list/policy",{params:i,paramsSerializer:t=>r.stringify(t)})}function a(){return e.get("/api/list/quality-inspection")}function u(){return e.get("/api/list/the-service")}function c(){return e.get("/api/list/rules-preset")}export{a,u as b,c,n as q};
