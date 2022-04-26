@@ -27,6 +27,7 @@ module.exports = {
     'plugin:import/typescript',
     'plugin:vue/vue3-recommended',
     'plugin:prettier/recommended',
+    'vue-global-api',
   ],
   settings: {
     'import/resolver': {
@@ -66,6 +67,13 @@ module.exports = {
     'no-param-reassign': 0,
     'prefer-regex-literals': 0,
     'import/no-extraneous-dependencies': 0,
+    // 以下配置新增
     'object-shorthand': 'off',
+    // @fix https://www.csdn.net/tags/MtTaEgxsNTI1MTgzLWJsb2cO0O0O.html
+    'import/no-unresolved': 'off',
+    'import/extensions': 'off',
+    'import/no-absolute-path': 'off',
+    'import/no-extraneous-dependencies': 'off',
+    'no-console': 'off',
   },
 };

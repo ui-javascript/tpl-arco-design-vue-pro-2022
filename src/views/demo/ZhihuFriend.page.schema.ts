@@ -1,3 +1,5 @@
+import { Message } from '@arco-design/web-vue';
+
 export const rule = [
   {
     type: 'input',
@@ -43,7 +45,7 @@ export const rule = [
 
 export const option = {
   onSubmit: function (formData: any) {
-    alert(JSON.stringify(formData));
+    Message.info(JSON.stringify(formData));
   },
 
   global: {

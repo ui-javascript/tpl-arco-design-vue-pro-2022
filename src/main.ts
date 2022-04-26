@@ -8,7 +8,6 @@ import ArcoVueIcon from '@arco-design/web-vue/es/icon';
 import formCreate from '@form-create/arco-design';
 
 // vxe-table
-import 'xe-utils';
 import XEUtils from 'xe-utils';
 import VXETable from 'vxe-table';
 import 'vxe-table/lib/style.css';

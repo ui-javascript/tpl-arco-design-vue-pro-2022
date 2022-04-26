@@ -8,7 +8,7 @@
   "footer": false,
   "themeColor": "#165DFF",
   "menuWidth": 220,
-  "globalSettings": true,
+  "globalSettings": false,
   "device": "desktop",
   "tabBar": false
 }

@@ -168,10 +168,10 @@
     total: 0,
   });
 
-  const handleSearch = () => {
-    tablePage.value.current = 1;
-    pageList();
-  };
+  // const handleSearch = () => {
+  //   tablePage.value.current = 1;
+  //   pageList();
+  // };
 
   const handlePageChange: VxePagerEvents.PageChange = ({
     currentPage: current,
