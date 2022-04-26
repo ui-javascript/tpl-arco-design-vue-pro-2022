@@ -1,1 +1,0 @@
-import{A as r,aC as o,aJ as _}from"./arco.7d076223.js";import{_ as t}from"./index.96661100.js";import"./chart.36e67b76.js";import"./vue.900c7ef7.js";const a={};function c(n,s){const e=_("router-view");return r(),o(e)}var u=t(a,[["render",c],["__scopeId","data-v-22a89aea"]]);export{u as default};
