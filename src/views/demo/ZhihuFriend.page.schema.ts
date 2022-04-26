@@ -48,13 +48,16 @@ export const option = {
 
   global: {
     '*': {
-      // 'auto-label-width': true,
       col: {
         span: 8,
       },
       wrap: {
-        labelColProps: { span: 8 },
-        wrapperColProps: { span: 16 },
+        labelColProps: {
+          span: 8,
+        },
+        wrapperColProps: {
+          span: 16,
+        },
       },
       props: {
         disabled: false,
