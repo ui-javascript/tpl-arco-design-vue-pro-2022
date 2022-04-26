@@ -9,6 +9,7 @@ import configImageminPlugin from './plugin/imagemin';
 export default mergeConfig(
   {
     mode: 'production',
+    base: '/tpl-arco-design-vue-pro-2022/',
     plugins: [
       configCompressPlugin('gzip'),
       configVisualizerPlugin(),
