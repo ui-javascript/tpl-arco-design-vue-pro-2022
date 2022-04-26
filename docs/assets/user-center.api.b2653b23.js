@@ -1,0 +1,1 @@
+import{D as t}from"./vendor.47a4e3a1.js";function s(){return t.post("/api/user/my-project/list")}function a(){return t.post("/api/user/my-team/list")}function u(){return t.post("/api/user/latest-activity")}function o(){return t.post("/api/user/certification")}function n(r,i){return t.post("/api/user/upload",r,{onUploadProgress:i})}export{u as a,a as b,o as c,s as q,n as u};
