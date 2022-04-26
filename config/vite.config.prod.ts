@@ -9,7 +9,6 @@ import configImageminPlugin from './plugin/imagemin';
 export default mergeConfig(
   {
     mode: 'production',
-    base: '/tpl-arco-design-vue-pro-2022/',
     plugins: [
       configCompressPlugin('gzip'),
       configVisualizerPlugin(),
@@ -24,6 +23,8 @@ export default mergeConfig(
             arco: ['@arco-design/web-vue'],
             chart: ['echarts', 'vue-echarts'],
             vue: ['vue', 'vue-router', 'pinia', '@vueuse/core', 'vue-i18n'],
+            vxe: ['vxe-table', 'xe-utils'],
+            form: ['@form-create/arco-design'],
           },
         },
       },

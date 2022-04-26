@@ -86,6 +86,7 @@
         v-model:current-page="tablePage.current"
         v-model:page-size="tablePage.pageSize"
         background
+        align="center"
         :total="tablePage.total"
         :layouts="[
           'PrevJump',
