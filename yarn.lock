@@ -492,6 +492,72 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
+"@form-create/arco-design@^3.1.5":
+  version "3.1.5"
+  resolved "https://registry.yarnpkg.com/@form-create/arco-design/-/arco-design-3.1.5.tgz#8e36dfffea5a20581579f360417a8699a942b23f"
+  integrity sha512-/bgMpRm8bTFLJVhHjYqXsdeV1arPqzEQjepUVF5VlLyGu1QYj+fA/jrSbb9PG7gi5ulgZY6uXGnHAfeVp2h7Pw==
+  dependencies:
+    "@form-create/component-arco-checkbox" "^3.1.3"
+    "@form-create/component-arco-frame" "^3.1.3"
+    "@form-create/component-arco-group" "^3.1.5"
+    "@form-create/component-arco-radio" "^3.1.3"
+    "@form-create/component-arco-upload" "^3.1.3"
+    "@form-create/component-subform" "^3.1.5"
+    "@form-create/core" "^3.1.5"
+    "@form-create/utils" "^3.1.3"
+
+"@form-create/component-arco-checkbox@^3.1.3":
+  version "3.1.3"
+  resolved "https://registry.yarnpkg.com/@form-create/component-arco-checkbox/-/component-arco-checkbox-3.1.3.tgz#1ab44072bed2d4ffc0717cabda44a39ed35237de"
+  integrity sha512-zVO3MLHO66EM3t8tJ8DGKyk94pry6DQhC4gQRCsH3Xq6F0cgYC8mIxYlxbIMtSMgGNGFfo4PDHZzZvs6NzP9Ww==
+  dependencies:
+    "@form-create/utils" "^3.1.3"
+
+"@form-create/component-arco-frame@^3.1.3":
+  version "3.1.3"
+  resolved "https://registry.yarnpkg.com/@form-create/component-arco-frame/-/component-arco-frame-3.1.3.tgz#7ac738ab75dc10c4a37a265a481fb1eb08b6fb7b"
+  integrity sha512-5LOmen6UojbOu/sxLAaRX4ccDN1DEqTQN5konLksdOSve8/NzyhWzYTAWQOOaxbKoOPGtX5nliUmkvpHob4UPg==
+  dependencies:
+    "@form-create/utils" "^3.1.3"
+
+"@form-create/component-arco-group@^3.1.5":
+  version "3.1.5"
+  resolved "https://registry.yarnpkg.com/@form-create/component-arco-group/-/component-arco-group-3.1.5.tgz#b77bde2a98c46b2f09c95bf2b53b357851a018d4"
+  integrity sha512-ifg/veHgWK3qYxgRc8FbyvPsx9cNzMyevV8TajWSDzdfm4X0MWheVPXU4a1+1/8PcIZ0zWhYtTy7DYAPWAZDAw==
+  dependencies:
+    "@form-create/utils" "^3.1.3"
+
+"@form-create/component-arco-radio@^3.1.3":
+  version "3.1.3"
+  resolved "https://registry.yarnpkg.com/@form-create/component-arco-radio/-/component-arco-radio-3.1.3.tgz#ad29a105c72fb6b1587a11c341900540adebe4a7"
+  integrity sha512-gmPxLClZ58e2xxV6KAx0V8v8DMrfQhbO9nggvQbvNiOc2WzlEM8b0LaV+5Q/vtGb7h1wzcdsQVckpziBDSzFdA==
+  dependencies:
+    "@form-create/utils" "^3.1.3"
+
+"@form-create/component-arco-upload@^3.1.3":
+  version "3.1.3"
+  resolved "https://registry.yarnpkg.com/@form-create/component-arco-upload/-/component-arco-upload-3.1.3.tgz#023c8f3f3d1532bb04b54b51121dce6f9328fd69"
+  integrity sha512-ptISzVRibgTu6mtpsTeoZimgk0P9Fa0+cOSediYdSJmVrfuBAqXdA8Qmwayd02Uy2o49FxMDtfDp0PqxnirwKQ==
+  dependencies:
+    "@form-create/utils" "^3.1.3"
+
+"@form-create/component-subform@^3.1.5":
+  version "3.1.5"
+  resolved "https://registry.yarnpkg.com/@form-create/component-subform/-/component-subform-3.1.5.tgz#806f32e6e8fd752ce7beb7424ef82e011e4f1c72"
+  integrity sha512-JHNEFGuwpnjGvCJ0I0GCqPL5al0qXoN4ymnRBpm+oL+6MMo5bz1kUyoqMX1MutuC96gHTqpeqc67hssi8g2mIw==
+
+"@form-create/core@^3.1.5":
+  version "3.1.5"
+  resolved "https://registry.yarnpkg.com/@form-create/core/-/core-3.1.5.tgz#fb64b30dbdc5825294292ea13586ce0d364ce20c"
+  integrity sha512-GRVNMwt5mDSeDwQnEmbAncGh+m+9eEfFktsjOA5+teDUPDuTRxj5/mM2cxSeXjnGlm0gVU4DGq6go+0e4MYzVA==
+  dependencies:
+    "@form-create/utils" "^3.1.3"
+
+"@form-create/utils@^3.1.3":
+  version "3.1.3"
+  resolved "https://registry.yarnpkg.com/@form-create/utils/-/utils-3.1.3.tgz#000c5b1081383a7336df5234bc35dac21c535bc9"
+  integrity sha512-zrOFUSeBIT9+qyEZ1SNnzU8bRI3dejFUT99orJDjPNvYdBYe6gj38t6WVonC5fdBozO5qeHqGmy8YNKFC/g77g==
+
 "@humanwhocodes/config-array@^0.5.0":
   version "0.5.0"
   resolved "https://registry.yarnpkg.com/@humanwhocodes/config-array/-/config-array-0.5.0.tgz#1407967d4c6eecd7388f83acf1eaf4d0c6e58ef9"

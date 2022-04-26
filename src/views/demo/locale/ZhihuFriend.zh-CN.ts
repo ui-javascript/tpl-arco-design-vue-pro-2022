@@ -1,4 +1,4 @@
 export default {
-  'menu.ZhihuFriend': 'ZhihuFriend',
-  'menu.ZhihuFriend.page': 'ZhihuFriend',
+  'menu.ZhihuFriend': '知乎大V',
+  'menu.ZhihuFriend.page': '知乎大V-内容页',
 };
