@@ -1,6 +1,6 @@
 const locale = {};
 const modules = import.meta.globEager(
-  '../../{views,components}/**/*.zh-CN.ts'
+  '../../{views,components}/**/*zh-CN.ts'
 );
 
 Object.keys(modules).forEach((key) => {
